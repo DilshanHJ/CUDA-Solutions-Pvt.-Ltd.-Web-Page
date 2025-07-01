@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "title": "About CUDA Solutions",
+    "subtitle": "Innovating Since 2008",
+    "description": "A premier enterprise software development and digital marketing company committed to transforming businesses through cutting-edge technology and strategic innovation.",
+    "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80"
+  },
+  "story": {
+    "title": "Our Story",
+    "subtitle": "Building the Future of Enterprise Technology",
+    "content": [
+      "Founded in 2008 with a vision to bridge the gap between innovative technology and practical business solutions, CUDA Solutions has grown from a small team of passionate developers to a global enterprise serving Fortune 500 companies worldwide.",
+      "Our journey began with a simple belief: that every business, regardless of size or industry, deserves access to enterprise-grade technology solutions that can transform their operations and accelerate growth.",
+      "Today, we're proud to be at the forefront of digital transformation, helping businesses navigate the complexities of modern technology while delivering measurable results and sustainable competitive advantages."
+    ],
+    "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "stats": [
+      {"number": "15+", "label": "Years of Excellence"},
+      {"number": "500+", "label": "Projects Delivered"},
+      {"number": "200+", "label": "Enterprise Clients"},
+      {"number": "150+", "label": "Team Members"}
+    ]
+  },
+  "mission": {
+    "title": "Our Mission & Vision",
+    "mission": {
+      "title": "Mission",
+      "content": "To empower businesses worldwide with innovative software solutions and strategic digital marketing that drive growth, efficiency, and competitive advantage in an ever-evolving digital landscape."
+    },
+    "vision": {
+      "title": "Vision",
+      "content": "To be the global leader in enterprise technology solutions, recognized for our commitment to excellence, innovation, and transformative impact on businesses across all industries."
+    },
+    "values": [
+      {
+        "title": "Innovation",
+        "description": "We constantly push the boundaries of what's possible, embracing emerging technologies and methodologies to deliver cutting-edge solutions.",
+        "icon": "innovation"
+      },
+      {
+        "title": "Excellence",
+        "description": "We maintain the highest standards in everything we do, from code quality to client service, ensuring exceptional outcomes every time.",
+        "icon": "excellence"
+      },
+      {
+        "title": "Integrity",
+        "description": "We build trust through transparency, honesty, and ethical practices in all our client relationships and business operations.",
+        "icon": "integrity"
+      },
+      {
+        "title": "Collaboration",
+        "description": "We believe in the power of partnerships, working closely with our clients to understand their unique challenges and co-create solutions.",
+        "icon": "collaboration"
+      }
+    ]
+  },
+  "team": {
+    "title": "Meet Our Leadership Team",
+    "description": "Industry veterans and visionary leaders driving innovation at CUDA Solutions",
+    "members": [
+      {
+        "name": "Dr. Michael Chen",
+        "position": "Chief Executive Officer",
+        "bio": "With over 20 years in enterprise software development, Michael leads CUDA Solutions' strategic vision and global expansion initiatives.",
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+        "linkedin": "#",
+        "expertise": ["Strategic Leadership", "Enterprise Architecture", "Digital Transformation"]
+      },
+      {
+        "name": "Sarah Rodriguez",
+        "position": "Chief Technology Officer",
+        "bio": "Sarah oversees our technology strategy and innovation initiatives, ensuring we stay at the forefront of emerging technologies.",
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b9e27401?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+        "linkedin": "#",
+        "expertise": ["Cloud Architecture", "AI/ML", "DevOps"]
+      },
+      {
+        "name": "David Kim",
+        "position": "Chief Marketing Officer",
+        "bio": "David leads our digital marketing division, developing data-driven strategies that deliver exceptional ROI for our clients.",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+        "linkedin": "#",
+        "expertise": ["Digital Strategy", "Growth Marketing", "Analytics"]
+      },
+      {
+        "name": "Lisa Thompson",
+        "position": "Chief Operations Officer",
+        "bio": "Lisa ensures operational excellence across all our divisions, maintaining our high standards of quality and client satisfaction.",
+        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+        "linkedin": "#",
+        "expertise": ["Operations Management", "Quality Assurance", "Process Optimization"]
+      }
+    ]
+  },
+  "culture": {
+    "title": "Our Culture & Work Environment",
+    "description": "Building a workplace where innovation thrives and talent flourishes",
+    "highlights": [
+      {
+        "title": "Remote-First Culture",
+        "description": "Flexible work arrangements that enable our team to deliver their best work from anywhere in the world.",
+        "icon": "remote"
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "Investment in professional development, certifications, and cutting-edge technology training for all team members.",
+        "icon": "learning"
+      },
+      {
+        "title": "Innovation Time",
+        "description": "Dedicated time for exploring new technologies and working on passion projects that could benefit our clients.",
+        "icon": "innovation"
+      },
+      {
+        "title": "Work-Life Balance",
+        "description": "Comprehensive benefits and wellness programs that support our team's personal and professional growth.",
+        "icon": "balance"
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80"
+  },
+  "certifications": {
+    "title": "Certifications & Partnerships",
+    "description": "Recognized expertise and strategic partnerships that ensure the highest quality standards",
+    "items": [
+      {
+        "name": "ISO 27001 Certified",
+        "description": "Information Security Management",
+        "image": "https://via.placeholder.com/120x80/0ea5e9/white?text=ISO+27001"
+      },
+      {
+        "name": "AWS Advanced Partner",
+        "description": "Amazon Web Services",
+        "image": "https://via.placeholder.com/120x80/ff9900/white?text=AWS"
+      },
+      {
+        "name": "Microsoft Gold Partner",
+        "description": "Azure Cloud Solutions",
+        "image": "https://via.placeholder.com/120x80/00a4ef/white?text=Microsoft"
+      },
+      {
+        "name": "Google Cloud Partner",
+        "description": "Cloud Platform Solutions",
+        "image": "https://via.placeholder.com/120x80/4285f4/white?text=GCP"
+      },
+      {
+        "name": "Salesforce Partner",
+        "description": "CRM Integration Specialist",
+        "image": "https://via.placeholder.com/120x80/00a1e0/white?text=Salesforce"
+      },
+      {
+        "name": "HubSpot Partner",
+        "description": "Marketing Automation",
+        "image": "https://via.placeholder.com/120x80/ff7a59/white?text=HubSpot"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Join Our Journey?",
+    "description": "Whether you're looking for career opportunities or enterprise solutions, we'd love to connect with you.",
+    "primaryCta": "View Careers",
+    "secondaryCta": "Contact Us",
+    "primaryLink": "/careers",
+    "secondaryLink": "/contact"
+  }
+}

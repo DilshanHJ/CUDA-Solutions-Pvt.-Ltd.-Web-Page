@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "title": "Enterprise-Grade Solutions",
+    "subtitle": "Powering Business Transformation",
+    "description": "Comprehensive software development and digital marketing services designed to scale your enterprise and drive measurable results.",
+    "backgroundImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80"
+  },
+  "softwareDevelopment": {
+    "title": "Enterprise Software Development",
+    "description": "Mission-critical applications built for enterprise scale and security.",
+    "details": [
+      "At CUDA Solutions, we architect and develop enterprise-grade software systems that handle complex business processes at scale. Our solutions are built with enterprise security, compliance, and performance requirements in mind, ensuring your critical business operations run smoothly.",
+      "We follow industry best practices including DevSecOps, microservices architecture, and cloud-native design principles to deliver solutions that are maintainable, scalable, and future-ready."
+    ],
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
+    "technologies": ["React", "Node.js", "Python", "Java", "Kubernetes", "AWS", "Azure", "PostgreSQL"],
+    "metrics": [
+      {"value": "99.9%", "label": "Uptime Guaranteed"},
+      {"value": "50%", "label": "Faster Development"},
+      {"value": "Enterprise", "label": "Security Standards"},
+      {"value": "24/7", "label": "Support Available"}
+    ],
+    "offerings": [
+      {
+        "title": "Enterprise Web Applications",
+        "description": "Scalable web applications with advanced authentication, role-based access control, and enterprise integrations.",
+        "icon": "desktop",
+        "features": ["Single Sign-On (SSO)", "Role-based Access", "API Integrations", "Real-time Analytics"]
+      },
+      {
+        "title": "Cloud-Native Systems",
+        "description": "Microservices-based applications designed for cloud environments with auto-scaling and fault tolerance.",
+        "icon": "cloud",
+        "features": ["Microservices Architecture", "Auto-scaling", "Container Orchestration", "CI/CD Pipeline"]
+      },
+      {
+        "title": "Mobile Enterprise Apps",
+        "description": "Secure mobile applications with offline capabilities and enterprise device management integration.",
+        "icon": "mobile",
+        "features": ["Offline Sync", "Enterprise MDM", "Biometric Security", "Push Notifications"]
+      }
+    ]
+  },
+  "digitalMarketing": {
+    "title": "Digital Marketing Excellence",
+    "description": "Data-driven marketing strategies that deliver measurable ROI and sustainable growth.",
+    "details": [
+      "Our digital marketing division combines advanced analytics, AI-powered insights, and proven methodologies to create campaigns that not only reach your target audience but convert them into loyal customers. We focus on measurable outcomes and continuous optimization.",
+      "From enterprise SEO strategies to sophisticated lead generation funnels, we provide end-to-end digital marketing solutions that scale with your business growth and deliver consistent, measurable results."
+    ],
+    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2039&q=80",
+    "technologies": ["Google Analytics", "HubSpot", "Salesforce", "Adobe Creative Suite", "Tableau", "SEMrush"],
+    "metrics": [
+      {"value": "300%", "label": "Average ROI Increase"},
+      {"value": "75%", "label": "Lead Generation Boost"},
+      {"value": "90%", "label": "Client Retention Rate"},
+      {"value": "24h", "label": "Campaign Response Time"}
+    ],
+    "offerings": [
+      {
+        "title": "Enterprise SEO & SEM",
+        "description": "Comprehensive search engine optimization and marketing strategies designed for large-scale operations.",
+        "icon": "seo",
+        "features": ["Technical SEO Audits", "Enterprise Schema", "Multi-location SEO", "Advanced Analytics"]
+      },
+      {
+        "title": "Social Media Strategy",
+        "description": "Strategic social media management and advertising across all major platforms with enterprise-level reporting.",
+        "icon": "social",
+        "features": ["Multi-platform Management", "Influencer Partnerships", "Social Commerce", "Brand Monitoring"]
+      },
+      {
+        "title": "Content & Brand Strategy",
+        "description": "Comprehensive content marketing and brand development strategies that build authority and drive engagement.",
+        "icon": "content",
+        "features": ["Content Strategy", "Brand Development", "Video Marketing", "Thought Leadership"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Enterprise?",
+    "description": "Let's discuss how our enterprise-grade solutions can accelerate your digital transformation and drive unprecedented growth.",
+    "cta": "Schedule Consultation",
+    "secondaryCta": "View Case Studies",
+    "link": "/contact"
+  }
+}

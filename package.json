@@ -1,0 +1,40 @@
+{
+  "name": "company-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "@react-three/drei": "^9.105.6",
+    "@react-three/fiber": "^8.16.8",
+    "@tailwindcss/vite": "^4.1.11",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.5",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
+    "tailwind-merge": "^2.1.0",
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.55.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "globals": "^13.24.0",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.0"
+  }
+}

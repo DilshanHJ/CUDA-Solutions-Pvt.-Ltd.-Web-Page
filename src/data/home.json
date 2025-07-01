@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "title": "Innovative Software Solutions & SaaS Platforms",
+    "subtitle": "Empowering Businesses with Cutting-Edge Technology",
+    "description": "We craft bespoke desktop applications, cloud systems, and mobile apps tailored to your needs, alongside powerful SaaS platforms for various industries.",
+    "primaryCta": "Start Your Project",
+    "secondaryCta": "Explore Solutions",
+    "image": "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "stats": [
+      { "number": "100+", "label": "Projects Delivered" },
+      { "number": "50+", "label": "Happy Clients" },
+      { "number": "10+", "label": "Years of Expertise" },
+      { "number": "98%", "label": "Client Satisfaction" }
+    ]
+  },
+  "expertise": {
+    "title": "Tailored Technology Solutions",
+    "description": "From custom software development to specialized SaaS platforms and digital marketing strategies, we deliver excellence.",
+    "services": [
+      {
+        "title": "Bespoke Software Development",
+        "description": "Custom desktop applications, cloud systems, and mobile apps built to your exact specifications, ensuring scalability and security.",
+        "features": [
+          "Desktop Applications",
+          "Cloud-Based Systems",
+          "Mobile App Development",
+          "End-to-End Customization"
+        ],
+        "cta": "Request a Quote",
+        "link": "/services",
+        "icon": "desktop"
+      },
+      {
+        "title": "SaaS Platform Solutions",
+        "description": "Specialized SaaS products including Hotel & Restaurant PMS, HRIS, ERP, POS, and more, designed for efficiency and growth.",
+        "features": [
+          "Multi-Tenant Architecture",
+          "Industry-Specific Features",
+          "Scalable Solutions",
+          "Continuous Updates"
+        ],
+        "cta": "Explore Platforms",
+        "link": "/products",
+        "icon": "saas"
+      },
+      {
+        "title": "Digital Marketing Strategies",
+        "description": "Data-driven marketing campaigns to elevate your brand and drive measurable results in the digital landscape.",
+        "features": [
+          "SEO & Content Strategy",
+          "Social Media Management",
+          "Targeted Advertising",
+          "Analytics & Reporting"
+        ],
+        "cta": "Boost Your Brand",
+        "link": "/services",
+        "icon": "marketing"
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Advanced Technology Stack",
+    "description": "We leverage modern technologies to build robust, future-proof solutions.",
+    "categories": [
+      {
+        "name": "Frontend",
+        "technologies": ["React", "Vue.js", "Angular", "TypeScript", "Next.js"]
+      },
+      {
+        "name": "Backend",
+        "technologies": ["Node.js", "Python", "Java", ".NET", "Go"]
+      },
+      {
+        "name": "Cloud & DevOps",
+        "technologies": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"]
+      },
+      {
+        "name": "Database & Analytics",
+        "technologies": [
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "Elasticsearch",
+          "Power BI"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About TechNova Solutions",
+    "description": "A leading software development and digital marketing firm dedicated to crafting bespoke solutions and innovative SaaS platforms. With over a decade of experience, our team of expert developers, designers, and strategists partners with clients to drive technological transformation and business growth.",
+    "cta": "Learn More About Us",
+    "link": "/about",
+    "image": "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "highlights": [
+      "Client-Centric Customization",
+      "Innovative SaaS Solutions",
+      "Global Support Availability",
+      "Agile & Transparent Process"
+    ]
+  },
+  "testimonial": {
+    "quote": "Their bespoke software solutions transformed our operations. The custom cloud system they developed boosted our efficiency by 40% within months.",
+    "author": "Michael Roberts",
+    "position": "CEO, TechForward Inc.",
+    "company": "Industry Leader in Logistics",
+    "image": "https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Partner with us to develop custom software solutions or leverage our specialized SaaS platforms. Let's discuss how we can help you achieve your business goals.",
+    "cta": "Schedule a Consultation",
+    "secondaryCta": "View Our Solutions",
+    "link": "/contact"
+  }
+}

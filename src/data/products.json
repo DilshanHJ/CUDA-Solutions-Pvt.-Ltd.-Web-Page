@@ -1,0 +1,139 @@
+{
+  "title": "Our SaaS Solutions",
+  "description": "Explore our range of specialized SaaS platforms designed to streamline operations and drive growth across various industries.",
+  "products": [
+    {
+      "id": "hotel-pms",
+      "title": "Hotel & Restaurant PMS",
+      "subtitle": "Comprehensive Property Management System",
+      "description": "A powerful, all-in-one solution for managing hotel and restaurant operations, from reservations to billing and guest services.",
+      "features": [
+        "Reservation Management",
+        "Guest Check-In/Check-Out",
+        "Billing & Invoicing",
+        "Housekeeping Management",
+        "Restaurant POS Integration",
+        "Real-Time Analytics"
+      ],
+      "image": "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "model": "hotel",
+      "cta": "Explore Hotel PMS",
+      "link": "/products/hotel-pms",
+      "highlighted": true
+    },
+    {
+      "id": "bookify",
+      "title": "Bookify",
+      "subtitle": "Booking & OTA Platform",
+      "description": "An innovative online travel agency and booking platform that connects travelers with accommodations, offering seamless booking experiences.",
+      "features": [
+        "Online Booking Engine",
+        "OTA Integration",
+        "Rate Management",
+        "Customer Reviews",
+        "Secure Payments",
+        "Mobile-Friendly Interface"
+      ],
+      "image": "https://images.pexels.com/photos/3862610/pexels-photo-3862610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "model": "booking",
+      "cta": "Discover Bookify",
+      "link": "/products/bookify",
+      "highlighted": true
+    },
+    {
+      "id": "hris",
+      "title": "HRIS System",
+      "subtitle": "Human Resource Information System",
+      "description": "Streamline HR processes with our comprehensive system for managing employee data, payroll, and performance.",
+      "features": [
+        "Employee Database",
+        "Payroll Management",
+        "Performance Tracking",
+        "Leave Management",
+        "Recruitment Tools",
+        "Compliance Reporting"
+      ],
+      "image": "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "model": "generic",
+      "cta": "Learn More",
+      "link": "/products/hris",
+      "highlighted": false
+    },
+    {
+      "id": "erp",
+      "title": "ERP Solution",
+      "subtitle": "Enterprise Resource Planning",
+      "description": "Integrate and manage core business processes with our scalable ERP system tailored to your organization's needs.",
+      "features": [
+        "Financial Management",
+        "Supply Chain Operations",
+        "Inventory Control",
+        "Project Management",
+        "CRM Integration",
+        "Customizable Modules"
+      ],
+      "image": "https://images.pexels.com/photos/3194523/pexels-photo-3194523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "model": "generic",
+      "cta": "Explore ERP",
+      "link": "/products/erp",
+      "highlighted": false
+    },
+    {
+      "id": "pos",
+      "title": "POS System",
+      "subtitle": "Point of Sale Solution",
+      "description": "Enhance retail and restaurant transactions with our intuitive POS system designed for speed and reliability.",
+      "features": [
+        "Transaction Processing",
+        "Inventory Management",
+        "Customer Loyalty Programs",
+        "Sales Reporting",
+        "Multi-Store Support",
+        "Offline Mode"
+      ],
+      "image": "https://images.pexels.com/photos/599705/pexels-photo-599705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "model": "generic",
+      "cta": "See POS Features",
+      "link": "/products/pos",
+      "highlighted": false
+    },
+    {
+      "id": "attendance-payroll",
+      "title": "Attendance & Payroll Management",
+      "subtitle": "Automated Workforce Tracking",
+      "description": "Simplify attendance tracking and payroll processing with our integrated system for accurate and efficient management.",
+      "features": [
+        "Time & Attendance Tracking",
+        "Shift Scheduling",
+        "Payroll Calculation",
+        "Tax Compliance",
+        "Employee Self-Service",
+        "Mobile Access"
+      ],
+      "image": "https://images.pexels.com/photos/4389409/pexels-photo-4389409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "model": "generic",
+      "cta": "Learn More",
+      "link": "/products/attendance-payroll",
+      "highlighted": false
+    },
+    {
+      "id": "access-control",
+      "title": "Access Control System",
+      "subtitle": "Secure Facility Management",
+      "description": "Protect your premises with our advanced access control system, offering secure and customizable entry management.",
+      "features": [
+        "Biometric Authentication",
+        "Card-Based Access",
+        "Remote Monitoring",
+        "Audit Trails",
+        "Integration with HR Systems",
+        "Scalable Architecture"
+      ],
+      "image": "https://images.pexels.com/photos/704767/pexels-photo-704767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "model": "generic",
+      "cta": "Explore Access Control",
+      "link": "/products/access-control",
+      "highlighted": false
+    }
+  ]
+}

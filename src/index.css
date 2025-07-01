@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #334155;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  
+  /* Elegant CSS custom properties */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --border-subtle: #e2e8f0;
+  --border-muted: #cbd5e1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  letter-spacing: -0.005em;
+}
+
+/* Remove fallback classes - using Tailwind's generated classes */
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+  border-radius: 3px;
+  border: 1px solid rgba(203, 213, 225, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #94a3b8, #64748b);
+}
+
+/* Typography improvements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Sophisticated button system */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.025em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.2);
+}
+
+.btn-accent:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  box-shadow: 0 8px 25px 0 rgba(14, 165, 233, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #64748b;
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  background: rgba(148, 163, 184, 0.1);
+  color: #334155;
+  border-color: #e2e8f0;
+}
+
+/* Sophisticated link styles */
+a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+a:hover {
+  color: #2563eb;
+}
+
+a.link-elegant {
+  color: #64748b;
+  position: relative;
+}
+
+a.link-elegant::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #3b82f6, #0ea5e9);
+  transition: width 0.3s ease;
+}
+
+a.link-elegant:hover::after {
+  width: 100%;
+}
+
+a.link-elegant:hover {
+  color: #334155;
+}
+
+/* Elegant glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sophisticated gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Refined card hover effects */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.card-hover:hover::before {
+  opacity: 1;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Loading states */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
