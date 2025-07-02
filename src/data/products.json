@@ -6,7 +6,7 @@
       "id": "hotel-pms",
       "title": "Hotel & Restaurant PMS",
       "subtitle": "Comprehensive Property Management System",
-      "description": "A powerful, all-in-one solution for managing hotel and restaurant operations, from reservations to billing and guest services.",
+      "description": "A powerful, all-in-one solution for managing hotel and restaurant operations, from reservations to billing and guest services including OTA integrations.",
       "features": [
         "Reservation Management",
         "Guest Check-In/Check-Out",

@@ -145,9 +145,9 @@ function Services() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
+              className="inline-flex items-center px-4 py-2 glass rounded-full text-sky-200 text-sm font-medium mb-8 border border-white/20"
             >
-              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
+              <div className="w-2 h-2 bg-sky-400 rounded-full mr-2 animate-pulse"></div>
               Our Services
             </motion.div>
 
@@ -197,11 +197,11 @@ function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-neutral-200">
-              <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-blue-600 text-sm font-medium mb-6 border border-neutral-200">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
               Our Expertise
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold font-display text-primary-900 mb-6">
+            <h2 className="text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-6">
               Comprehensive Technology Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
@@ -227,7 +227,7 @@ function Services() {
                     {getIcon(category.icon)}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-primary-900 mb-4 font-display">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 font-display">
                     {category.title}
                   </h3>
 
@@ -237,7 +237,7 @@ function Services() {
 
                   <Link
                     to="/contact"
-                    className="inline-flex items-center text-brand-600 font-semibold hover:text-brand-700 transition-colors group-hover:translate-x-2 transform duration-300 link-elegant"
+                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-2 transform duration-300 link-elegant"
                   >
                     Learn More
                     <svg
@@ -284,20 +284,20 @@ function Services() {
                   catIndex % 2 === 0 ? "glass" : "bg-gradient-subtle"
                 } rounded-full ${
                   catIndex % 2 === 0
-                    ? "text-accent-200 border border-white/20"
-                    : "text-brand-600 border border-neutral-200"
+                    ? "text-sky-200 border border-white/20"
+                    : "text-blue-600 border border-neutral-200"
                 } text-sm font-medium mb-6`}
               >
                 <div
                   className={`w-2 h-2 ${
-                    catIndex % 2 === 0 ? "bg-accent-400" : "bg-brand-500"
+                    catIndex % 2 === 0 ? "bg-sky-400" : "bg-blue-500"
                   } rounded-full mr-2 animate-pulse`}
                 ></div>
                 Detailed Services
               </div>
               <h2
                 className={`text-5xl lg:text-6xl font-bold font-display mb-6 ${
-                  catIndex % 2 === 0 ? "text-white" : "text-primary-900"
+                  catIndex % 2 === 0 ? "text-white" : "text-gray-900"
                 }`}
               >
                 {category.title}
@@ -333,7 +333,7 @@ function Services() {
                     <div
                       className={`absolute top-0 right-0 w-32 h-32 ${
                         catIndex % 2 === 0
-                          ? "bg-accent-500/5"
+                          ? "bg-sky-500/5"
                           : "bg-gradient-brand opacity-5"
                       } rounded-full transform translate-x-16 -translate-y-16`}
                     ></div>
@@ -341,8 +341,8 @@ function Services() {
                     <h3
                       className={`text-2xl font-bold font-display mb-4 ${
                         catIndex % 2 === 0
-                          ? "text-white group-hover:text-accent-100"
-                          : "text-primary-900"
+                          ? "text-white group-hover:text-sky-100"
+                          : "text-gray-900"
                       } transition-colors duration-300`}
                     >
                       {service.title}
@@ -375,7 +375,7 @@ function Services() {
                           <div
                             className={`w-2 h-2 ${
                               catIndex % 2 === 0
-                                ? "bg-accent-500"
+                                ? "bg-sky-500"
                                 : "bg-gradient-brand"
                             } rounded-full mr-3 group-hover:scale-125 transition-transform duration-300`}
                           ></div>
@@ -404,8 +404,8 @@ function Services() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-5xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20">
-              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
+            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-sky-200 text-sm font-medium mb-8 border border-white/20">
+              <div className="w-2 h-2 bg-sky-400 rounded-full mr-2 animate-pulse"></div>
               Ready to Start?
             </div>
 

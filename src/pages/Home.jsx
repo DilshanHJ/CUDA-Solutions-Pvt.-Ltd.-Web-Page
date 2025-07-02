@@ -73,7 +73,7 @@ function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-elegant">
         <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
         <div className="absolute inset-0 bg-mesh-sophisticated opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950/40 to-transparent"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -145,8 +145,8 @@ function Home() {
                     transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
                     className="text-center group"
                   >
-                    <div className="text-3xl font-bold text-accent-400 mb-2 font-display group-hover:scale-110 transition-transform duration-300">
-                      {stat.number}
+                    <div className="text-3xl font-bold text-sky-400 mb-2 font-display group-hover:scale-110 transition-transform duration-300">
+                    {stat.number}
                     </div>
                     <div className="text-sm text-neutral-400">{stat.label}</div>
                   </motion.div>
@@ -167,7 +167,7 @@ function Home() {
                     alt="Enterprise Technology Solutions"
                     className="w-full rounded-2xl shadow-luxury transform hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent rounded-2xl"></div>
 
                   {/* Floating Elements */}
                   <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-brand rounded-2xl flex items-center justify-center shadow-dramatic animate-float">
@@ -211,11 +211,11 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-neutral-200">
-              <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-blue-600 text-sm font-medium mb-6 border border-neutral-200">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
               Our Expertise
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold font-display text-primary-900 mb-6">
+            <h2 className="text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-6">
               {expertise.title}
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
@@ -240,7 +240,7 @@ function Home() {
                     {getIcon(service.icon)}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-primary-900 mb-4 font-display">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 font-display">
                     {service.title}
                   </h3>
 
@@ -262,7 +262,7 @@ function Home() {
 
                   <Link
                     to={service.link}
-                    className="inline-flex items-center text-brand-600 font-semibold hover:text-brand-700 transition-colors group-hover:translate-x-2 transform duration-300 link-elegant"
+                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-2 transform duration-300 link-elegant"
                   >
                     {service.cta}
                     <svg
@@ -296,8 +296,8 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-6 border border-white/20">
-              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
+            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-sky-200 text-sm font-medium mb-6 border border-white/20">
+              <div className="w-2 h-2 bg-sky-400 rounded-full mr-2 animate-pulse"></div>
               Technology Stack
             </div>
             <h2 className="text-5xl lg:text-6xl font-bold font-display mb-6">
@@ -318,7 +318,7 @@ function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="glass p-8 rounded-2xl border border-white/20 hover:bg-white/10 transition-all duration-300 group"
               >
-                <h3 className="text-xl font-bold mb-6 text-accent-400 font-display group-hover:text-accent-300 transition-colors">
+                <h3 className="text-xl font-bold mb-6 text-sky-400 font-display group-hover:text-sky-300 transition-colors">
                   {category.name}
                 </h3>
                 <div className="space-y-3">
@@ -358,7 +358,7 @@ function Home() {
 
               {/* Floating stats */}
               <div className="absolute -bottom-8 -right-8 glass-dark p-6 rounded-xl backdrop-blur-xl border border-white/20 z-20">
-                <div className="text-2xl font-bold text-accent-400 mb-1">
+                <div className="text-2xl font-bold text-sky-400 mb-1">
                   ISO 27001
                 </div>
                 <div className="text-sm text-neutral-300">
@@ -373,12 +373,12 @@ function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="inline-flex items-center px-4 py-2 bg-white rounded-full text-brand-600 text-sm font-medium mb-6 border border-neutral-200 shadow-soft">
-                <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
+              <div className="inline-flex items-center px-4 py-2 bg-white rounded-full text-blue-600 text-sm font-medium mb-6 border border-neutral-200 shadow-soft">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
                 About Us
               </div>
 
-              <h2 className="text-5xl lg:text-6xl font-bold font-display text-primary-900 mb-8">
+              <h2 className="text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-8">
                 {about.title}
               </h2>
               <p className="text-xl text-neutral-600 mb-10 leading-relaxed">
@@ -439,7 +439,7 @@ function Home() {
               </div>
             </div>
 
-            <blockquote className="text-3xl lg:text-4xl font-light text-primary-800 mb-12 leading-relaxed italic font-display">
+            <blockquote className="text-3xl lg:text-4xl font-light text-gray-800 mb-12 leading-relaxed italic font-display">
               "{testimonial.quote}"
             </blockquote>
 
@@ -450,7 +450,7 @@ function Home() {
                 className="w-16 h-16 rounded-full mr-4 shadow-card"
               />
               <div className="text-left">
-                <div className="font-bold text-primary-900 font-display">
+                <div className="font-bold text-gray-900 font-display">
                   {testimonial.author}
                 </div>
                 <div className="text-neutral-600">{testimonial.position}</div>
@@ -476,8 +476,8 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-5xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20">
-              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
+            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-sky-200 text-sm font-medium mb-8 border border-white/20">
+              <div className="w-2 h-2 bg-sky-400 rounded-full mr-2 animate-pulse"></div>
               Ready to Start?
             </div>
 

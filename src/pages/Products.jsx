@@ -25,7 +25,7 @@ function Products() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
+              className="inline-flex items-center px-4 py-2 glass rounded-full text-sky-200 text-sm font-medium mb-8 border border-white/20"
             >
               <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
               Our Products
@@ -80,11 +80,11 @@ function Products() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-neutral-200">
-              <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-blue-600 text-sm font-medium mb-6 border border-neutral-200">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
               Featured Products
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold font-display text-primary-900 mb-6">
+            <h2 className="text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-6">
               Featured Solutions
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
@@ -117,10 +117,10 @@ function Products() {
                   </div>
                   
                   <div className="p-8 relative z-10">
-                    <div className="inline-block px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-xs font-medium mb-4 border border-neutral-200 shadow-soft">
+                    <div className="inline-block px-4 py-2 bg-gradient-subtle rounded-full text-blue-600 text-xs font-medium mb-4 border border-neutral-200 shadow-soft">
                       Featured Product
                     </div>
-                    <h3 className="text-2xl font-bold font-display text-primary-900 mb-3">
+                    <h3 className="text-2xl font-bold font-display text-gray-900 mb-3">
                       {product.title}
                     </h3>
                     <p className="text-lg text-neutral-600 mb-4">
