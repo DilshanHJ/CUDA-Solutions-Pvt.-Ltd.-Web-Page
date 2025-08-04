@@ -26,7 +26,7 @@ function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
+              className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
             >
               <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
               About Us
@@ -81,7 +81,7 @@ function About() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-gray-200">
+            <div className="badge badge-brand mb-6">
               <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
               Our Story
             </div>
@@ -119,9 +119,9 @@ function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group bg-white p-6 rounded-xl shadow-card hover:shadow-luxury card-hover border border-gray-100 text-center transition-all duration-500 relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-brand opacity-5 rounded-full transform translate-x-12 -translate-y-12"></div>
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-primary opacity-5 rounded-full transform translate-x-12 -translate-y-12"></div>
                 <div className="relative">
-                  <h4 className="text-3xl font-bold text-brand-600 mb-2 group-hover:text-brand-700 group-hover:scale-110 transition-all duration-300">
+                  <h4 className="text-3xl font-bold text-primary-600 mb-2 group-hover:text-primary-700 group-hover:scale-110 transition-all duration-300">
                     {stat.number}
                   </h4>
                   <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
@@ -144,7 +144,7 @@ function About() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-accent-200 text-sm font-medium mb-6 border border-white/20">
+            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-6 border border-white/20">
               <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
               Mission & Vision
             </div>
@@ -161,9 +161,9 @@ function About() {
               className="glass p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-500 card-hover h-full relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-500/5 rounded-full transform translate-x-16 -translate-y-16"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-accent-500/30 to-accent-600/20 rounded-2xl flex items-center justify-center mb-6 shadow-lg relative z-10">
+              <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mb-6 shadow-accent-glow relative z-10">
                 <svg
-                  className="w-8 h-8 text-accent-400"
+                  className="w-8 h-8 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -186,9 +186,9 @@ function About() {
               className="glass p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-500 card-hover h-full relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-500/5 rounded-full transform translate-x-16 -translate-y-16"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-accent-500/30 to-accent-600/20 rounded-2xl flex items-center justify-center mb-6 shadow-lg relative z-10">
+              <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mb-6 shadow-accent-glow relative z-10">
                 <svg
-                  className="w-8 h-8 text-accent-400"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -217,7 +217,7 @@ function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass p-5 rounded-xl shadow-lg border border-white/20"
+                className="glass p-5 rounded-xl shadow-glass border border-white/20"
               >
                 <h4 className="text-lg font-bold text-white mb-1">
                   {value.title}
@@ -241,7 +241,7 @@ function About() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-gray-200">
+            <div className="badge badge-brand mb-6">
               <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
               Our Team
             </div>
@@ -291,8 +291,8 @@ function About() {
         </div>
       </section>
 
-      {/* Enhanced Culture Section */}
-      <section className="py-32 bg-gradient-luxury relative overflow-hidden">
+      {/* Professional Culture Section */}
+      <section className="py-32 bg-gradient-navy text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-20"></div>
         <div className="absolute inset-0 bg-mesh-sophisticated opacity-15"></div>
         
@@ -327,11 +327,11 @@ function About() {
                 className="group"
               >
                 <div className="glass p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-500 card-hover h-full relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-accent-500/10 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-125 transition-transform duration-700"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-accent-500/10 rounded-full transform translate-x-16 -translate-y-16"></div>
                   
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-brand-glow relative z-10">
-                    <div className="w-8 h-8 bg-white rounded-lg group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                      <div className="w-4 h-4 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full animate-pulse-glow"></div>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-all duration-300 shadow-brand-glow relative z-10">
+                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                      <div className="w-4 h-4 bg-gradient-primary rounded-full"></div>
                     </div>
                   </div>
                   
@@ -342,7 +342,7 @@ function About() {
                     {highlight.description}
                   </p>
                   
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-accent-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                 </div>
               </motion.div>
             ))}
@@ -350,8 +350,8 @@ function About() {
         </div>
       </section>
 
-      {/* Enhanced Certifications Section */}
-      <section className="py-32 bg-gradient-accent relative overflow-hidden">
+      {/* Professional Certifications Section */}
+      <section className="py-32 bg-gradient-teal text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-25"></div>
         <div className="absolute inset-0 bg-mesh-sophisticated opacity-20"></div>
         
@@ -386,14 +386,14 @@ function About() {
                 className="group"
               >
                 <div className="glass p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-500 card-hover h-full relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/5 to-primary-500/10 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-125 transition-transform duration-700"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/5 to-primary-500/10 rounded-full transform translate-x-16 -translate-y-16"></div>
                   
                   <div className="relative mb-6">
-                    <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-luxury relative z-10">
+                    <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto group-hover:scale-105 transition-all duration-300 shadow-luxury relative z-10">
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-16 h-12 object-contain group-hover:scale-105 transition-transform duration-300"
+                        className="w-16 h-12 object-contain"
                       />
                     </div>
                   </div>

@@ -43,7 +43,7 @@ function Contact() {
 
   // Function to render form fields dynamically
   const renderFormField = (field, index) => {
-    const commonClasses = "w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 focus:outline-none transition-all duration-300 shadow-sm hover:shadow-md";
+    const commonClasses = "w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 focus:outline-none transition-all duration-300 shadow-sm hover:shadow-md";
     const labelClasses = "block text-gray-900 mb-2 font-medium";
 
     const fieldElement = () => {
@@ -188,10 +188,10 @@ function Contact() {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Header Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-900">
-        <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
-        <div className="absolute inset-0 bg-mesh-sophisticated opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
+        <div className="absolute inset-0 bg-hero-pattern opacity-40"></div>
+        <div className="absolute inset-0 bg-mesh-sophisticated opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950/50 to-transparent"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -204,7 +204,7 @@ function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
+              className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
             >
               <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
               Contact Us
@@ -256,7 +256,7 @@ function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-gray-200">
+            <div className="badge badge-brand mb-6">
               <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
               Get In Touch
             </div>
@@ -276,7 +276,7 @@ function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 h-full relative overflow-hidden">
+              <div className="bg-white p-8 rounded-2xl shadow-card hover:shadow-luxury transition-all duration-500 border border-gray-100 h-full relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-brand opacity-5 rounded-full transform translate-x-16 -translate-y-16"></div>
 
                 <h3 className="text-2xl font-bold font-display text-gray-900 mb-4">
@@ -309,7 +309,7 @@ function Contact() {
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="mt-4 btn bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-lg transition-all duration-300"
+                      className="mt-4 btn btn-accent px-4 py-2 rounded-lg transition-all duration-300"
                     >
                       Send Another Message
                     </button>
@@ -324,7 +324,7 @@ function Contact() {
 
                     <button
                       type="submit"
-                      className="btn bg-accent-500 hover:bg-accent-600 text-white text-lg px-6 py-3 shadow-glow hover:shadow-accent-500/25 rounded-lg transition-all duration-300 w-full md:w-auto"
+                      className="btn btn-primary text-lg px-6 py-3 shadow-glow hover:shadow-primary-500/25 rounded-lg transition-all duration-300 w-full md:w-auto"
                     >
                       {contactData.form.submitText}
                       <svg
@@ -352,7 +352,7 @@ function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-gray-900 text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+              <div className="bg-gradient-navy text-white p-8 rounded-2xl shadow-luxury relative overflow-hidden">
                 <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold font-display text-white mb-4">
@@ -370,9 +370,9 @@ function Contact() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="group flex items-start bg-gradient-to-br from-gray-800/60 to-gray-900/40 backdrop-blur-sm p-5 rounded-xl border border-gray-600/30 shadow-lg hover:shadow-xl transition-all duration-500"
+                        className="group flex items-start glass p-5 rounded-xl border border-white/20 shadow-glass hover:shadow-luxury transition-all duration-500"
                       >
-                        <div className="w-12 h-12 bg-gradient-to-br from-accent-500/30 to-accent-600/20 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-accent-glow">
                           {getIcon(info.icon)}
                         </div>
                         <div>
@@ -398,7 +398,7 @@ function Contact() {
                     ))}
                   </div>
 
-                  <div className="bg-gray-800/50 backdrop-blur-sm p-5 rounded-lg border border-gray-700/30">
+                  <div className="glass p-5 rounded-lg border border-white/20">
                     <h3 className="text-lg font-bold text-white mb-3">
                       {contactData.contactInfo.methods.find(method => method.icon === 'clock')?.title || 'Business Hours'}
                     </h3>
@@ -416,7 +416,7 @@ function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gray-900 text-white relative overflow-hidden">
+      <section className="py-32 bg-gradient-hero text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
         <div className="absolute inset-0 bg-mesh-sophisticated opacity-20"></div>
 
@@ -428,7 +428,7 @@ function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-5xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20">
+            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20">
               <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
               Ready to Start?
             </div>

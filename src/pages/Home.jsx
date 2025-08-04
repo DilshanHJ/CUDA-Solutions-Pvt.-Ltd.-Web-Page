@@ -70,7 +70,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-elegant">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
         <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
         <div className="absolute inset-0 bg-mesh-sophisticated opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-950/40 to-transparent"></div>
@@ -87,7 +87,7 @@ function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
+                className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
               >
                 <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
                 {hero.subtitle}
@@ -170,7 +170,7 @@ function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent rounded-2xl"></div>
 
                   {/* Floating Elements */}
-                  <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-brand rounded-2xl flex items-center justify-center shadow-dramatic animate-float">
+                  <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-dramatic animate-float">
                     <svg
                       className="w-12 h-12 text-white"
                       fill="none"
@@ -188,7 +188,7 @@ function Home() {
 
                   <div className="absolute -bottom-4 -left-4 glass p-4 rounded-xl backdrop-blur-xl border border-white/20">
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-success-500 rounded-full animate-pulse"></div>
+                      <div className="status-dot status-dot-success animate-pulse"></div>
                       <span className="text-white text-sm font-medium">
                         All Systems Operational
                       </span>
@@ -211,7 +211,7 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-neutral-200">
+            <div className="badge badge-brand mb-6">
               <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
               Our Expertise
             </div>
@@ -236,7 +236,7 @@ function Home() {
                 <div className="bg-white p-8 rounded-2xl shadow-card hover:shadow-luxury transition-all duration-500 card-hover border border-neutral-100 h-full relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-brand opacity-5 rounded-full transform translate-x-16 -translate-y-16"></div>
 
-                  <div className="bg-gradient-brand w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-elevated relative z-10">
+                  <div className="bg-gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-elevated relative z-10">
                     {getIcon(service.icon)}
                   </div>
 
@@ -254,7 +254,7 @@ function Home() {
                         key={idx}
                         className="flex items-center text-sm text-neutral-700"
                       >
-                        <div className="w-2 h-2 bg-gradient-brand rounded-full mr-3"></div>
+                        <div className="w-2 h-2 bg-gradient-primary rounded-full mr-3"></div>
                         {feature}
                       </div>
                     ))}
@@ -357,11 +357,11 @@ function Home() {
               />
 
               {/* Floating stats */}
-              <div className="absolute -bottom-8 -right-8 glass-dark p-6 rounded-xl backdrop-blur-xl border border-white/20 z-20">
-                <div className="text-2xl font-bold text-accent-400 mb-1">
+              <div className="absolute -bottom-8 -right-8 glass-light p-6 rounded-xl backdrop-blur-xl border border-white/20 z-20">
+                <div className="text-2xl font-bold text-accent-600 mb-1">
                   ISO 27001
                 </div>
-                <div className="text-sm text-neutral-300">
+                <div className="text-sm text-neutral-600">
                   Certified Security
                 </div>
               </div>
@@ -373,7 +373,7 @@ function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="inline-flex items-center px-4 py-2 bg-white rounded-full text-brand-600 text-sm font-medium mb-6 border border-neutral-200 shadow-soft">
+              <div className="badge badge-brand mb-6">
                 <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
                 About Us
               </div>
@@ -388,7 +388,7 @@ function Home() {
               <div className="grid grid-cols-2 gap-6 mb-10">
                 {about.highlights.map((highlight, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-3 h-3 bg-gradient-brand rounded-full mr-3"></div>
+                    <div className="w-3 h-3 bg-gradient-primary rounded-full mr-3"></div>
                     <span className="text-neutral-700 font-medium">
                       {highlight}
                     </span>
@@ -428,7 +428,7 @@ function Home() {
             className="max-w-5xl mx-auto text-center"
           >
             <div className="mb-12">
-              <div className="w-20 h-20 bg-gradient-brand rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-elevated">
+              <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-elevated">
                 <svg
                   className="w-10 h-10 text-white"
                   fill="currentColor"
@@ -464,7 +464,7 @@ function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-32 bg-gradient-elegant text-white relative overflow-hidden">
+      <section className="py-32 bg-gradient-hero text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
         <div className="absolute inset-0 bg-mesh-sophisticated opacity-20"></div>
 

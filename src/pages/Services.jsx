@@ -197,7 +197,7 @@ function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-neutral-200">
+            <div className="badge badge-brand mb-6">
               <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
               Our Expertise
             </div>
@@ -223,7 +223,7 @@ function Services() {
                 <div className="bg-white p-8 rounded-2xl shadow-card hover:shadow-luxury transition-all duration-500 card-hover border border-neutral-100 h-full relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-brand opacity-5 rounded-full transform translate-x-16 -translate-y-16"></div>
 
-                  <div className="bg-gradient-brand w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-elevated relative z-10">
+                  <div className="bg-gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-elevated relative z-10">
                     {getIcon(category.icon)}
                   </div>
 
@@ -281,11 +281,11 @@ function Services() {
             >
               <div
                 className={`inline-flex items-center px-4 py-2 ${
-                  catIndex % 2 === 0 ? "glass" : "bg-gradient-subtle"
+                  catIndex % 2 === 0 ? "glass" : "badge badge-brand"
                 } rounded-full ${
                   catIndex % 2 === 0
                     ? "text-accent-200 border border-white/20"
-                    : "text-brand-600 border border-neutral-200"
+                    : ""
                 } text-sm font-medium mb-6`}
               >
                 <div
@@ -376,7 +376,7 @@ function Services() {
                             className={`w-2 h-2 ${
                               catIndex % 2 === 0
                                 ? "bg-accent-500"
-                                : "bg-gradient-brand"
+                                : "bg-gradient-primary"
                             } rounded-full mr-3 group-hover:scale-125 transition-transform duration-300`}
                           ></div>
                           {feature}
@@ -392,7 +392,7 @@ function Services() {
       ))}
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-elegant text-white relative overflow-hidden">
+      <section className="py-32 bg-gradient-hero text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
         <div className="absolute inset-0 bg-mesh-sophisticated opacity-20"></div>
 

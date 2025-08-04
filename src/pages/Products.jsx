@@ -80,7 +80,7 @@ function Products() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-neutral-200">
+            <div className="badge badge-brand mb-6">
               <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
               Featured Products
             </div>
@@ -113,11 +113,11 @@ function Products() {
                       alt={product.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
                   </div>
                   
                   <div className="p-8 relative z-10">
-                    <div className="inline-block px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-xs font-medium mb-4 border border-neutral-200 shadow-soft">
+                    <div className="badge badge-primary mb-4">
                       Featured Product
                     </div>
                     <h3 className="text-2xl font-bold font-display text-gray-900 mb-3">
@@ -139,7 +139,7 @@ function Products() {
                           transition={{ duration: 0.3, delay: idx * 0.1 }}
                           className="flex items-center"
                         >
-                          <div className="w-2 h-2 bg-gradient-brand rounded-full mr-2"></div>
+                          <div className="w-2 h-2 bg-gradient-primary rounded-full mr-2"></div>
                           <span className="text-sm text-neutral-700">
                             {feature}
                           </span>
@@ -215,7 +215,7 @@ function Products() {
                         alt={product.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
                     </div>
                     
                     <h3 className="text-xl font-bold font-display text-white mb-2 group-hover:text-accent-100 transition-colors duration-300">

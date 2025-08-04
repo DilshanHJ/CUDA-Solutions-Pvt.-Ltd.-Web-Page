@@ -22,7 +22,7 @@ function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center group">
-              <div className="bg-gradient-brand text-white px-4 py-2 rounded-xl mr-3 font-bold text-lg group-hover:shadow-brand-glow transition-all duration-500 shadow-elevated animate-pulse-glow">
+              <div className="bg-gradient-primary text-white px-4 py-2 rounded-xl mr-3 font-bold text-lg group-hover:shadow-brand-glow transition-all duration-500 shadow-elevated">
                 4stax
               </div>
               <span className="text-xl font-bold font-display text-white group-hover:text-accent-300 transition-colors duration-300">
@@ -47,7 +47,7 @@ function Navbar() {
                 {isActive(item.path) && (
                   <motion.div
                     layoutId="navbar-active"
-                    className="absolute inset-0 bg-gradient-to-r from-brand-500/20 to-accent-500/20 rounded-lg border border-white/20"
+                    className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-lg border border-white/20"
                     initial={false}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -114,7 +114,7 @@ function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-gradient-luxury border-t border-white/10"
+            className="md:hidden bg-gradient-navy border-t border-white/10"
           >
             <div className="px-4 py-6 space-y-3">
               {navItems.map((item, index) => (
@@ -129,7 +129,7 @@ function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
                       isActive(item.path)
-                        ? "bg-gradient-brand text-white shadow-elevated"
+                        ? "bg-gradient-primary text-white shadow-elevated"
                         : "text-neutral-300 hover:text-white hover:bg-white/10"
                     }`}
                   >
