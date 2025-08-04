@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion"; // eslint-disable-line no-unused-vars
+import logo from "../assets/logo/logo_1.png"; // Adjust the path as necessary
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ function Navbar() {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Products", path: "/products" },
-    { name: "Contact", path: "/contact" }
+    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -22,15 +23,16 @@ function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center group">
-              <div className="bg-gradient-primary text-white px-4 py-2 rounded-xl mr-3 font-bold text-lg group-hover:shadow-brand-glow transition-all duration-500 shadow-elevated">
+              <img src={logo} alt="4stax Labs Logo" className="h-14" />
+              {/* <div className="bg-gradient-primary text-white px-4 py-2 rounded-xl mr-3 font-bold text-lg group-hover:shadow-brand-glow transition-all duration-500 shadow-elevated">
                 4stax
               </div>
               <span className="text-xl font-bold font-display text-white group-hover:text-accent-300 transition-colors duration-300">
                 Labs
-              </span>
+              </span> */}
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -59,12 +61,22 @@ function Navbar() {
               className="btn btn-primary px-6 py-2.5 text-sm ml-4 font-semibold"
             >
               Get Started
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
               </svg>
             </Link>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
@@ -79,7 +91,7 @@ function Navbar() {
                 <motion.span
                   variants={{
                     open: { rotate: 45, y: 6 },
-                    closed: { rotate: 0, y: 0 }
+                    closed: { rotate: 0, y: 0 },
                   }}
                   className="absolute block h-0.5 w-6 bg-current transform transition-transform origin-center rounded-full"
                   style={{ top: "6px" }}
@@ -87,7 +99,7 @@ function Navbar() {
                 <motion.span
                   variants={{
                     open: { opacity: 0 },
-                    closed: { opacity: 1 }
+                    closed: { opacity: 1 },
                   }}
                   className="absolute block h-0.5 w-6 bg-current rounded-full"
                   style={{ top: "12px" }}
@@ -95,7 +107,7 @@ function Navbar() {
                 <motion.span
                   variants={{
                     open: { rotate: -45, y: -6 },
-                    closed: { rotate: 0, y: 0 }
+                    closed: { rotate: 0, y: 0 },
                   }}
                   className="absolute block h-0.5 w-6 bg-current transform transition-transform origin-center rounded-full"
                   style={{ top: "18px" }}
@@ -149,8 +161,18 @@ function Navbar() {
                   className="block w-full btn btn-primary text-center py-3 font-semibold"
                 >
                   Get Started
-                  <svg className="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-4 h-4 ml-2 inline"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </Link>
               </motion.div>
