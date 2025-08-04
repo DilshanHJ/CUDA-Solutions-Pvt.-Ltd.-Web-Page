@@ -32,18 +32,19 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-luxury text-white border-t border-white/10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-hero text-white border-t border-white/10 relative overflow-hidden">
+      <div className="absolute inset-0 bg-hero-pattern opacity-20"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Brand Section */}
             <div className="lg:col-span-4">
               <div className="flex items-center mb-6">
-                <div className="bg-gradient-brand text-white px-4 py-2 rounded-xl mr-3 font-bold text-lg shadow-elevated">
-                  CUDA
+                <div className="bg-gradient-brand text-white px-4 py-2 rounded-xl mr-3 font-bold text-lg shadow-elevated animate-pulse-glow">
+                  4stax
                 </div>
-                <span className="text-xl font-bold font-display">Solutions</span>
+                <span className="text-xl font-bold font-display">Labs</span>
               </div>
               <p className="text-neutral-400 leading-relaxed mb-6 max-w-md">
                 Enterprise software development and digital marketing excellence that transforms businesses worldwide through innovative technology solutions.
@@ -154,7 +155,7 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-6 mb-4 md:mb-0">
               <p className="text-neutral-400 text-sm">
-                © {currentYear} CUDA Solutions. All rights reserved.
+                © {currentYear} 4stax Labs. All rights reserved.
               </p>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-success-500 rounded-full animate-pulse"></div>
@@ -165,8 +166,8 @@ function Footer() {
             <div className="flex items-center space-x-6 text-sm text-neutral-400">
               <span>Built with ❤️ in Silicon Valley</span>
               <span>•</span>
-              <a href="mailto:info@cudasolutions.com" className="hover:text-white transition-colors">
-                info@cudasolutions.com
+              <a href="mailto:info@4staxlabs.com" className="hover:text-white transition-colors">
+                info@4staxlabs.com
               </a>
             </div>
           </div>

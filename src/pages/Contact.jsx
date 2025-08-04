@@ -43,7 +43,7 @@ function Contact() {
 
   // Function to render form fields dynamically
   const renderFormField = (field, index) => {
-    const commonClasses = "w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 focus:outline-none transition-all duration-300 shadow-sm hover:shadow-md";
+    const commonClasses = "w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 focus:outline-none transition-all duration-300 shadow-sm hover:shadow-md";
     const labelClasses = "block text-gray-900 mb-2 font-medium";
 
     const fieldElement = () => {
@@ -186,7 +186,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-subtle">
       {/* Header Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
@@ -204,7 +204,7 @@ function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-200 text-sm font-medium mb-8 border border-white/20"
+              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
             >
               <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
               Contact Us
@@ -256,8 +256,8 @@ function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-blue-600 text-sm font-medium mb-6 border border-gray-200">
-              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-subtle rounded-full text-brand-600 text-sm font-medium mb-6 border border-gray-200">
+              <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
               Get In Touch
             </div>
             <h2 className="text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-6">
@@ -277,7 +277,7 @@ function Contact() {
               transition={{ duration: 0.8 }}
             >
               <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 h-full relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500 opacity-5 rounded-full transform translate-x-16 -translate-y-16"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-brand opacity-5 rounded-full transform translate-x-16 -translate-y-16"></div>
 
                 <h3 className="text-2xl font-bold font-display text-gray-900 mb-4">
                   {contactData.form.title}
@@ -372,11 +372,11 @@ function Contact() {
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         className="group flex items-start bg-gradient-to-br from-gray-800/60 to-gray-900/40 backdrop-blur-sm p-5 rounded-xl border border-gray-600/30 shadow-lg hover:shadow-xl transition-all duration-500"
                       >
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500/30 to-blue-600/20 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <div className="w-12 h-12 bg-gradient-to-br from-accent-500/30 to-accent-600/20 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                           {getIcon(info.icon)}
                         </div>
                         <div>
-                          <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-100 transition-colors duration-300">
+                          <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-100 transition-colors duration-300">
                             {info.title}
                           </h3>
                           <a
@@ -389,7 +389,7 @@ function Contact() {
                                 ? "noopener noreferrer"
                                 : ""
                             }
-                            className="text-gray-300 hover:text-blue-400 transition-colors duration-300 group-hover:translate-x-1 transform inline-block"
+                            className="text-gray-300 hover:text-accent-400 transition-colors duration-300 group-hover:translate-x-1 transform inline-block"
                           >
                             {info.detail}
                           </a>
@@ -428,8 +428,8 @@ function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-5xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-200 text-sm font-medium mb-8 border border-white/20">
-              <div className="w-2 h-2 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20">
+              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
               Ready to Start?
             </div>
 

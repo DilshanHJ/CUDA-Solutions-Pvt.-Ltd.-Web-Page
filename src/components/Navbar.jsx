@@ -17,16 +17,16 @@ function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-gradient-elegant backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
+    <nav className="bg-gradient-hero backdrop-blur-xl border-b border-white/10 sticky top-0 z-50 shadow-luxury">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center group">
-              <div className="bg-gradient-brand text-white px-4 py-2 rounded-xl mr-3 font-bold text-lg group-hover:shadow-brand-glow transition-all duration-500 shadow-elevated">
-                CUDA
+              <div className="bg-gradient-brand text-white px-4 py-2 rounded-xl mr-3 font-bold text-lg group-hover:shadow-brand-glow transition-all duration-500 shadow-elevated animate-pulse-glow">
+                4stax
               </div>
               <span className="text-xl font-bold font-display text-white group-hover:text-accent-300 transition-colors duration-300">
-                Solutions
+                Labs
               </span>
             </Link>
           </div>
