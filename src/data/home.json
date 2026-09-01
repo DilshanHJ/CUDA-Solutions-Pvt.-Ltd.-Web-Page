@@ -1,21 +1,21 @@
 {
   "hero": {
-    "title": "Innovative Software Solutions & SaaS Platforms",
-    "subtitle": "Empowering Businesses with Cutting-Edge Technology",
-    "description": "We craft bespoke desktop applications, cloud systems, and mobile apps tailored to your needs, alongside powerful SaaS platforms for various industries.",
+    "title": "Enterprise Software & SaaS Solutions",
+    "subtitle": "Workflow-Driven Technology for Growing Businesses",
+    "description": "We design and develop enterprise software and SaaS solutions that simplify workflows, connect teams, and turn complex business processes into efficient digital systems. From workflow management platforms to custom desktop, mobile, and cloud applications, we build secure, scalable software around the way your business operates.",
     "primaryCta": "Start Your Project",
     "secondaryCta": "Explore Solutions",
-    "image": "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
     "stats": [
-      { "number": "100+", "label": "Projects Delivered" },
-      { "number": "50+", "label": "Happy Clients" },
-      { "number": "10+", "label": "Years of Expertise" },
+      { "number": "20+", "label": "Projects Delivered" },
+      { "number": "10+", "label": "Happy Clients" },
+      { "number": "5+", "label": "Years of Expertise" },
       { "number": "98%", "label": "Client Satisfaction" }
     ]
   },
   "expertise": {
     "title": "Tailored Technology Solutions",
-    "description": "From custom software development to specialized SaaS platforms and digital marketing strategies, we deliver excellence.",
+    "description": "We build practical software around real business workflows, combining custom enterprise development with specialized SaaS platforms designed for efficiency, visibility, and growth.",
     "services": [
       {
         "title": "Bespoke Software Development",
@@ -42,25 +42,12 @@
         "cta": "Explore Platforms",
         "link": "/products",
         "icon": "saas"
-      },
-      {
-        "title": "Digital Marketing Strategies",
-        "description": "Data-driven marketing campaigns to elevate your brand and drive measurable results in the digital landscape.",
-        "features": [
-          "SEO & Content Strategy",
-          "Social Media Management",
-          "Targeted Advertising",
-          "Analytics & Reporting"
-        ],
-        "cta": "Boost Your Brand",
-        "link": "/services",
-        "icon": "marketing"
       }
     ]
   },
   "technologies": {
     "title": "Advanced Technology Stack",
-    "description": "We leverage modern technologies to build robust, future-proof solutions.",
+    "description": "We use proven modern technologies to build secure, scalable, and maintainable software across web, cloud, desktop, mobile, and data environments.",
     "categories": [
       {
         "name": "Frontend",
@@ -76,39 +63,56 @@
       },
       {
         "name": "Database & Analytics",
-        "technologies": [
-          "PostgreSQL",
-          "MongoDB",
-          "Redis",
-          "Elasticsearch",
-          "Power BI"
-        ]
+        "technologies": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Power BI"]
       }
     ]
   },
   "about": {
     "title": "About 4stax Labs",
-    "description": "A leading software development and digital marketing firm dedicated to crafting bespoke solutions and innovative SaaS platforms. With over a decade of experience, our team of expert developers, designers, and strategists partners with clients to drive technological transformation and business growth.",
+    "description": "We are a software development company focused on building enterprise applications and SaaS products that make everyday business workflows simpler, faster, and easier to manage. Our team combines product thinking with practical engineering to deliver reliable solutions across desktop, mobile, cloud, and web environments.",
     "cta": "Learn More About Us",
     "link": "/about",
-    "image": "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85",
     "highlights": [
       "Client-Centric Customization",
-      "Innovative SaaS Solutions",
-      "Global Support Availability",
+      "Workflow-Focused SaaS Solutions",
+      "Scalable Cloud Architecture",
       "Agile & Transparent Process"
     ]
   },
-  "testimonial": {
-    "quote": "Their bespoke software solutions transformed our operations. The custom cloud system they developed boosted our efficiency by 40% within months.",
-    "author": "Michael Roberts",
-    "position": "CEO, TechForward Inc.",
-    "company": "Industry Leader in Logistics",
-    "image": "https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  },
+  "testimonials": [
+    {
+      "quote": "Their bespoke software solution transformed the way our team manages daily operations. We now have better visibility, fewer manual steps, and a much smoother workflow.",
+      "author": "Michael Roberts",
+      "position": "Operations Director",
+      "company": "Regional Logistics Company",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      "quote": "4stax Labs took a complicated process and turned it into a straightforward digital workflow our staff could actually use. The team was responsive throughout the project.",
+      "author": "Sarah Mitchell",
+      "position": "General Manager",
+      "company": "Hospitality Group",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      "quote": "The SaaS platform gave us a central place to manage information that had previously been spread across multiple tools. It has made day-to-day coordination much easier.",
+      "author": "Daniel Perera",
+      "position": "Business Manager",
+      "company": "SME Services Company",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      "quote": "From the initial requirements through deployment, the process felt practical and collaborative. The final system fits our workflow instead of forcing our team to change how we work.",
+      "author": "Emily Carter",
+      "position": "Operations Manager",
+      "company": "Professional Services Firm",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
+    }
+  ],
   "cta": {
     "title": "Ready to Transform Your Business?",
-    "description": "Partner with us to develop custom software solutions or leverage our specialized SaaS platforms. Let's discuss how we can help you achieve your business goals.",
+    "description": "Partner with us to develop custom software or deploy a SaaS platform built around your business workflows. Let's discuss the processes you want to simplify and the outcomes you want to achieve.",
     "cta": "Schedule a Consultation",
     "secondaryCta": "View Our Solutions",
     "link": "/contact"

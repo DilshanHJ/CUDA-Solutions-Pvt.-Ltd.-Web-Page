@@ -1,10 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion"; // eslint-disable-line no-unused-vars
+import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  Activity, Atom, BarChart3, Braces, Boxes, Cloud, Code2, Container, Database, FileCode2, Gauge, Globe2, Layers3, Network, Server, Workflow, Zap,
+} from "lucide-react";
 import homeData from "../data/home.json";
 
 function Home() {
-  const { hero, expertise, technologies, about, testimonial, cta } = homeData;
+  const { hero, expertise, technologies, about, testimonials, cta } = homeData;
+
+  const testimonialSliderRef = React.useRef(null);
+
+  const handleTestimonialMouseMove = (event) => {
+    if (window.matchMedia("(pointer: coarse)").matches || !testimonialSliderRef.current) return;
+    const slider = testimonialSliderRef.current;
+    const bounds = slider.getBoundingClientRect();
+    const progress = Math.max(0, Math.min(1, (event.clientX - bounds.left) / bounds.width));
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    slider.scrollLeft = maxScroll * progress;
+  };
+
+  const technologyIcons = {
+    React: Atom,
+    "Vue.js": Layers3,
+    Angular: Code2,
+    TypeScript: FileCode2,
+    "Next.js": Globe2,
+    "Node.js": Server,
+    Python: Braces,
+    Java: Code2,
+    ".NET": Boxes,
+    Go: Zap,
+    AWS: Cloud,
+    Azure: Cloud,
+    "Google Cloud": Cloud,
+    Docker: Container,
+    Kubernetes: Network,
+    PostgreSQL: Database,
+    MongoDB: Database,
+    Redis: Activity,
+    Elasticsearch: Gauge,
+    "Power BI": BarChart3,
+  };
+
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 300], [0, 50]);
   const y2 = useTransform(scrollY, [0, 300], [0, -50]);
@@ -46,22 +84,6 @@ function Home() {
             />
           </svg>
         );
-      case "marketing":
-        return (
-          <svg
-            className={iconProps}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-10.11a23.91 23.91 0 00-1.014-5.395m0 0a23.784 23.784 0 00-7.806 2.91m0 0A23.745 23.745 0 003 4.17M.38 15.855a23.91 23.91 0 001.014-5.395m0 0a23.784 23.784 0 017.806-2.91m0 0A23.745 23.745 0 0021 4.17M.38 8.825a23.91 23.91 0 00-1.014 5.395"
-            />
-          </svg>
-        );
       default:
         return null;
     }
@@ -98,9 +120,9 @@ function Home() {
                 <br />
                 <span className="text-white">Development &</span>
                 <br />
-                <span className="text-accent-400">Digital Marketing</span>
+                <span className="text-accent-400">SaaS Solutions</span>
                 <br />
-                <span className="text-white">Excellence</span>
+                <span className="text-white">Built Around Your Workflow</span>
               </h1>
 
               <p className="text-xl text-neutral-300 mb-10 leading-relaxed max-w-2xl">
@@ -154,7 +176,7 @@ function Home() {
               </div>
             </motion.div>
 
-            <motion.div style={{ y: y1 }} className="relative lg:block hidden">
+            <motion.div style={{ y: y1 }} className="relative mt-8 lg:mt-0">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -170,9 +192,9 @@ function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent rounded-2xl"></div>
 
                   {/* Floating Elements */}
-                  <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-dramatic animate-float">
+                  <div className="absolute -top-4 -right-2 sm:-top-6 sm:-right-6 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-dramatic animate-float">
                     <svg
-                      className="w-12 h-12 text-white"
+                      className="w-8 h-8 sm:w-12 sm:h-12 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -223,7 +245,7 @@ function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {expertise.services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -308,31 +330,29 @@ function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.categories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass p-8 rounded-2xl border border-white/20 hover:bg-white/10 transition-all duration-300 group"
-              >
-                <h3 className="text-xl font-bold mb-6 text-accent-400 font-display group-hover:text-accent-300 transition-colors">
-                  {category.name}
-                </h3>
-                <div className="space-y-3">
-                  {category.technologies.map((tech, idx) => (
-                    <div
-                      key={idx}
-                      className="text-neutral-300 text-sm bg-white/5 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors cursor-default"
-                    >
-                      {tech}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 max-w-6xl mx-auto">
+            {technologies.categories.flatMap((category) => category.technologies).map((tech, index) => {
+              const Icon = technologyIcons[tech] || Code2;
+              return (
+                <motion.div
+                  key={tech}
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.45, delay: index * 0.035 }}
+                  className="group flex justify-center"
+                >
+                  <div className="tech-hexagon w-full max-w-[156px] aspect-square p-[1px] transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-105">
+                    <div className="tech-hexagon-inner w-full h-full flex flex-col items-center justify-center px-3 text-center">
+                      <span className="tech-icon-shell flex items-center justify-center w-12 h-12 rounded-xl mb-3">
+                        <Icon className="w-6 h-6 text-accent-300" strokeWidth={1.8} aria-hidden="true" />
+                      </span>
+                      <span className="text-sm sm:text-[15px] font-semibold text-white leading-tight">{tech}</span>
                     </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -418,48 +438,74 @@ function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-32 bg-white">
+      <section className="py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-5xl mx-auto text-center"
+            className="text-center mb-14"
           >
-            <div className="mb-12">
-              <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-elevated">
-                <svg
-                  className="w-10 h-10 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
-                </svg>
-              </div>
+            <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-elevated">
+              <Workflow className="w-10 h-10 text-white" strokeWidth={1.7} aria-hidden="true" />
             </div>
-
-            <blockquote className="text-3xl lg:text-4xl font-light text-gray-800 mb-12 leading-relaxed italic font-display">
-              "{testimonial.quote}"
-            </blockquote>
-
-            <div className="flex items-center justify-center">
-              <img
-                src={testimonial.image}
-                alt={testimonial.author}
-                className="w-16 h-16 rounded-full mr-4 shadow-card"
-              />
-              <div className="text-left">
-                <div className="font-bold text-gray-900 font-display">
-                  {testimonial.author}
-                </div>
-                <div className="text-neutral-600">{testimonial.position}</div>
-                <div className="text-sm text-neutral-500">
-                  {testimonial.company}
-                </div>
-              </div>
+            <div className="badge badge-brand mb-6">
+              <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
+              Client Experiences
             </div>
+            <h2 className="text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-5">
+              Built Around the Way You Work
+            </h2>
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+              A few examples of the outcomes our software-focused approach is designed to create.
+            </p>
           </motion.div>
+
+          <div
+            ref={testimonialSliderRef}
+            className="relative max-w-7xl mx-auto overflow-x-auto hide-scrollbar cursor-ew-resize select-none touch-pan-x"
+            onMouseMove={handleTestimonialMouseMove}
+          >
+            <div className="flex gap-6 sm:gap-8 w-max pb-2">
+              {testimonials.map((item, index) => (
+                <motion.article
+                  key={item.author}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.55, delay: index * 0.08 }}
+                  className="w-[min(86vw,420px)] sm:w-[420px] shrink-0 bg-gradient-subtle border border-neutral-100 rounded-3xl p-7 sm:p-8 shadow-card hover:shadow-luxury transition-shadow duration-300"
+                >
+                  <div className="flex gap-1 mb-6" aria-label="5 out of 5 stars">
+                    {Array.from({ length: 5 }).map((_, starIndex) => (
+                      <span key={starIndex} className="text-primary-500 text-lg" aria-hidden="true">★</span>
+                    ))}
+                  </div>
+                  <blockquote className="text-lg sm:text-xl font-light text-gray-800 leading-relaxed italic mb-8">
+                    “{item.quote}”
+                  </blockquote>
+                  <div className="flex items-center">
+                    <img
+                      src={item.image}
+                      alt={item.author}
+                      className="w-14 h-14 rounded-full mr-4 shadow-card object-cover"
+                      loading="lazy"
+                    />
+                    <div className="text-left">
+                      <div className="font-bold text-gray-900 font-display">{item.author}</div>
+                      <div className="text-neutral-600 text-sm">{item.position}</div>
+                      <div className="text-sm text-neutral-500">{item.company}</div>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+
+            <div className="mt-8 flex items-center justify-center gap-3 text-sm text-neutral-500">
+              <span className="inline-flex items-center gap-2"><span className="w-8 h-px bg-neutral-300"></span>Move left or right to browse</span>
+            </div>
+          </div>
         </div>
       </section>
 
