@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
-  Activity, Atom, BarChart3, Braces, Boxes, Cloud, Code2, Container, Database, FileCode2, Gauge, Globe2, Layers3, Network, Server, Workflow, Zap,
+  Workflow,
 } from "lucide-react";
 import homeData from "../data/home.json";
 
@@ -21,26 +21,26 @@ function Home() {
   };
 
   const technologyIcons = {
-    React: Atom,
-    "Vue.js": Layers3,
-    Angular: Code2,
-    TypeScript: FileCode2,
-    "Next.js": Globe2,
-    "Node.js": Server,
-    Python: Braces,
-    Java: Code2,
-    ".NET": Boxes,
-    Go: Zap,
-    AWS: Cloud,
-    Azure: Cloud,
-    "Google Cloud": Cloud,
-    Docker: Container,
-    Kubernetes: Network,
-    PostgreSQL: Database,
-    MongoDB: Database,
-    Redis: Activity,
-    Elasticsearch: Gauge,
-    "Power BI": BarChart3,
+    React: ["react", "61DAFB"],
+    "Vue.js": ["vuedotjs", "4FC08D"],
+    Angular: ["angular", "DD0031"],
+    TypeScript: ["typescript", "3178C6"],
+    "Next.js": ["nextdotjs", "FFFFFF"],
+    "Node.js": ["nodedotjs", "5FA04E"],
+    Python: ["python", "3776AB"],
+    Java: ["openjdk", "FFFFFF"],
+    ".NET": ["dotnet", "512BD4"],
+    Go: ["go", "00ADD8"],
+    AWS: ["amazonwebservices", "FF9900"],
+    Azure: ["microsoftazure", "0078D4"],
+    "Google Cloud": ["googlecloud", "4285F4"],
+    Docker: ["docker", "2496ED"],
+    Kubernetes: ["kubernetes", "326CE5"],
+    PostgreSQL: ["postgresql", "4169E1"],
+    MongoDB: ["mongodb", "47A248"],
+    Redis: ["redis", "FF4438"],
+    Elasticsearch: ["elasticsearch", "00BFB3"],
+    "Power BI": ["powerbi", "F2C811"],
   };
 
   const { scrollY } = useScroll();
@@ -122,7 +122,7 @@ function Home() {
                 <br />
                 <span className="text-accent-400">SaaS Solutions</span>
                 <br />
-                <span className="text-white">Built Around Your Workflow</span>
+                <span className="text-white">Built Around Your Workforce</span>
               </h1>
 
               <p className="text-xl text-neutral-300 mb-10 leading-relaxed max-w-2xl">
@@ -330,26 +330,26 @@ function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 max-w-6xl mx-auto">
+          <div className="tech-honeycomb max-w-6xl mx-auto" aria-label="Technology stack">
             {technologies.categories.flatMap((category) => category.technologies).map((tech, index) => {
-              const Icon = technologyIcons[tech] || Code2;
+              const [slug, color] = technologyIcons[tech] || ["code", "A8DADC"];
               return (
                 <motion.div
                   key={tech}
-                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  initial={{ opacity: 0, scale: 0.88, y: 18 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.45, delay: index * 0.035 }}
-                  className="group flex justify-center"
+                  transition={{ duration: 0.42, delay: index * 0.03 }}
+                  className="tech-honeycomb-item group"
                 >
-                  <div className="tech-hexagon w-full max-w-[156px] aspect-square p-[1px] transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-105">
-                    <div className="tech-hexagon-inner w-full h-full flex flex-col items-center justify-center px-3 text-center">
-                      <span className="tech-icon-shell flex items-center justify-center w-12 h-12 rounded-xl mb-3">
-                        <Icon className="w-6 h-6 text-accent-300" strokeWidth={1.8} aria-hidden="true" />
-                      </span>
-                      <span className="text-sm sm:text-[15px] font-semibold text-white leading-tight">{tech}</span>
-                    </div>
-                  </div>
+                  <img
+                    src={`https://cdn.simpleicons.org/${slug}/${color}`}
+                    alt=""
+                    loading="lazy"
+                    className="tech-brand-icon"
+                    aria-hidden="true"
+                  />
+                  <span>{tech}</span>
                 </motion.div>
               );
             })}
@@ -372,7 +372,7 @@ function Home() {
               <div className="absolute -inset-4 bg-gradient-brand opacity-10 rounded-3xl"></div>
               <img
                 src={about.image}
-                alt="About 4stax Labs"
+                alt="Sri Lankan technology professional working in a modern office"
                 className="w-full rounded-2xl shadow-luxury relative z-10"
               />
 

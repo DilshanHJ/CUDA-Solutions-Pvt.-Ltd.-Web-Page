@@ -1,21 +1,33 @@
 {
   "hero": {
     "title": "Enterprise Software & SaaS Solutions",
-    "subtitle": "Workflow-Driven Technology for Growing Businesses",
-    "description": "We design and develop enterprise software and SaaS solutions that simplify workflows, connect teams, and turn complex business processes into efficient digital systems. From workflow management platforms to custom desktop, mobile, and cloud applications, we build secure, scalable software around the way your business operates.",
+    "subtitle": "Empowering Sri Lankan Businesses with Practical Technology",
+    "description": "We design and develop enterprise software and SaaS solutions that simplify workforce management, connect teams, and turn complex business processes into efficient digital systems. From HR, payroll, attendance, and shift management to custom desktop, mobile, and cloud applications, we build secure, scalable software around the way your business operates.",
     "primaryCta": "Start Your Project",
     "secondaryCta": "Explore Solutions",
-    "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
+    "image": "https://images.pexels.com/photos/8676431/pexels-photo-8676431.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&fit=crop",
     "stats": [
-      { "number": "20+", "label": "Projects Delivered" },
-      { "number": "10+", "label": "Happy Clients" },
-      { "number": "5+", "label": "Years of Expertise" },
-      { "number": "98%", "label": "Client Satisfaction" }
+      {
+        "number": "20+",
+        "label": "Projects Delivered"
+      },
+      {
+        "number": "10+",
+        "label": "Happy Clients"
+      },
+      {
+        "number": "5+",
+        "label": "Years of Expertise"
+      },
+      {
+        "number": "98%",
+        "label": "Client Satisfaction"
+      }
     ]
   },
   "expertise": {
     "title": "Tailored Technology Solutions",
-    "description": "We build practical software around real business workflows, combining custom enterprise development with specialized SaaS platforms designed for efficiency, visibility, and growth.",
+    "description": "We build practical software around real workforce and business operations, combining custom enterprise development with specialized SaaS platforms designed for efficiency, visibility, and growth.",
     "services": [
       {
         "title": "Bespoke Software Development",
@@ -51,31 +63,55 @@
     "categories": [
       {
         "name": "Frontend",
-        "technologies": ["React", "Vue.js", "Angular", "TypeScript", "Next.js"]
+        "technologies": [
+          "React",
+          "Vue.js",
+          "Angular",
+          "TypeScript",
+          "Next.js"
+        ]
       },
       {
         "name": "Backend",
-        "technologies": ["Node.js", "Python", "Java", ".NET", "Go"]
+        "technologies": [
+          "Node.js",
+          "Python",
+          "Java",
+          ".NET",
+          "Go"
+        ]
       },
       {
         "name": "Cloud & DevOps",
-        "technologies": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"]
+        "technologies": [
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Docker",
+          "Kubernetes"
+        ]
       },
       {
         "name": "Database & Analytics",
-        "technologies": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Power BI"]
+        "technologies": [
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "Elasticsearch",
+          "Power BI"
+        ]
       }
     ]
   },
   "about": {
     "title": "About 4stax Labs",
-    "description": "We are a software development company focused on building enterprise applications and SaaS products that make everyday business workflows simpler, faster, and easier to manage. Our team combines product thinking with practical engineering to deliver reliable solutions across desktop, mobile, cloud, and web environments.",
+    "description": "We are a Sri Lankan software development company focused on building enterprise applications and SaaS products that make everyday workforce and business operations simpler, faster, and easier to manage. Our team combines product thinking with practical engineering to deliver reliable solutions across desktop, mobile, cloud, and web environments.",
     "cta": "Learn More About Us",
     "link": "/about",
-    "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85",
+    "image": "https://images.pexels.com/photos/12517509/pexels-photo-12517509.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&fit=crop",
     "highlights": [
       "Client-Centric Customization",
-      "Workflow-Focused SaaS Solutions",
+      "Workforce-Focused SaaS Solutions",
       "Scalable Cloud Architecture",
       "Agile & Transparent Process"
     ]

@@ -651,33 +651,114 @@ p {
   }
 }
 
-/* Technology honeycomb / beehive cards */
-.tech-hexagon {
-  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
-  background: linear-gradient(145deg, rgba(168, 218, 220, 0.8), rgba(69, 123, 157, 0.5));
+/* Technology stack: lightweight staggered honeycomb without card frames */
+.tech-honeycomb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: clamp(1.35rem, 3vw, 3rem);
+  row-gap: clamp(1rem, 2vw, 1.8rem);
+  padding: 0.75rem 0.5rem 2.5rem;
 }
 
-.tech-hexagon-inner {
-  clip-path: inherit;
-  background: linear-gradient(145deg, rgba(29, 53, 87, 0.96), rgba(24, 39, 63, 0.96));
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.tech-honeycomb-item {
+  width: clamp(88px, 9vw, 116px);
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  text-align: center;
+  transition: transform 220ms ease, opacity 220ms ease;
 }
 
-.tech-icon-shell {
-  background: rgba(168, 218, 220, 0.08);
-  border: 1px solid rgba(168, 218, 220, 0.2);
-  box-shadow: 0 0 20px rgba(168, 218, 220, 0.08);
+.tech-honeycomb-item:nth-child(even) {
+  transform: translateY(34px);
 }
 
-@media (max-width: 640px) {
-  .tech-hexagon {
-    max-width: 145px;
+.tech-honeycomb-item:hover {
+  transform: translateY(-4px) scale(1.06);
+}
+
+.tech-honeycomb-item:nth-child(even):hover {
+  transform: translateY(30px) scale(1.06);
+}
+
+.tech-brand-icon {
+  width: clamp(34px, 3.4vw, 46px);
+  height: clamp(34px, 3.4vw, 46px);
+  object-fit: contain;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.tech-honeycomb-item:hover .tech-brand-icon {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 8px 16px rgba(168, 218, 220, 0.18));
+}
+
+.tech-honeycomb-item span {
+  color: rgba(241, 250, 238, 0.84);
+  font-size: 0.78rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .tech-honeycomb {
+    column-gap: 0.9rem;
+    row-gap: 0.65rem;
+    padding-inline: 0;
+    padding-bottom: 2rem;
+  }
+
+  .tech-honeycomb-item {
+    width: 80px;
+    min-height: 80px;
+  }
+
+  .tech-honeycomb-item:nth-child(even) {
+    transform: translateY(22px);
+  }
+
+  .tech-honeycomb-item:nth-child(even):hover {
+    transform: translateY(19px) scale(1.04);
+  }
+
+  .tech-honeycomb-item span {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .tech-honeycomb {
+    column-gap: 0.45rem;
+  }
+
+  .tech-honeycomb-item {
+    width: 68px;
+    min-height: 72px;
+    gap: 0.5rem;
+  }
+
+  .tech-brand-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tech-honeycomb-item:nth-child(even) {
+    transform: translateY(18px);
+  }
+
+  .tech-honeycomb-item:nth-child(even):hover {
+    transform: translateY(15px) scale(1.04);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tech-hexagon,
-  .tech-icon-shell {
+  .tech-honeycomb-item,
+  .tech-brand-icon {
     transition: none !important;
   }
 }
