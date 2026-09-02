@@ -228,7 +228,7 @@ function Home() {
                 <div className="relative">
                   <img
                     src={hero.image}
-                    alt="Enterprise Technology Solutions"
+                    alt="Workforce management team reviewing HR and business operations"
                     className="w-full rounded-2xl shadow-luxury transform hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent rounded-2xl"></div>
@@ -408,7 +408,7 @@ function Home() {
               <div className="absolute -inset-4 bg-gradient-brand opacity-10 rounded-3xl"></div>
               <img
                 src={about.image}
-                alt="Sri Lankan technology professional working in a modern office"
+                alt="South Asian software team collaborating in a modern office"
                 className="w-full rounded-2xl shadow-luxury relative z-10"
               />
 

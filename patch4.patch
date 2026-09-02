@@ -1,0 +1,44 @@
+diff --git a/src/data/home.json b/src/data/home.json
+index 65d3086..df130a3 100644
+--- a/src/data/home.json
++++ b/src/data/home.json
+@@ -5,7 +5,7 @@
+     "description": "We design and develop enterprise software and SaaS solutions that simplify workforce management, connect teams, and turn complex business processes into efficient digital systems. From HR, payroll, attendance, and shift management to custom desktop, mobile, and cloud applications, we build secure, scalable software around the way your business operates.",
+     "primaryCta": "Start Your Project",
+     "secondaryCta": "Explore Solutions",
+-    "image": "https://media.glassdoor.com/l/ff/ab/ed/07/team-work.jpg",
++    "image": "https://images.pexels.com/photos/7693736/pexels-photo-7693736.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&fit=crop",
+     "stats": [
+       {
+         "number": "20+",
+@@ -108,7 +108,7 @@
+     "description": "We are a Sri Lankan software development company focused on building enterprise applications and SaaS products that make everyday workforce and business operations simpler, faster, and easier to manage. Our team combines product thinking with practical engineering to deliver reliable solutions across desktop, mobile, cloud, and web environments.",
+     "cta": "Learn More About Us",
+     "link": "/about",
+-    "image": "https://assets.roar.media/Tech-English/2018/02/4.-Senz-Mate.jpg?w=1200",
++    "image": "https://images.pexels.com/photos/8128192/pexels-photo-8128192.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&fit=crop",
+     "highlights": [
+       "Client-Centric Customization",
+       "Workforce-Focused SaaS Solutions",
+diff --git a/src/pages/Home.jsx b/src/pages/Home.jsx
+index 85d7753..af3c122 100644
+--- a/src/pages/Home.jsx
++++ b/src/pages/Home.jsx
+@@ -228,7 +228,7 @@ function Home() {
+                 <div className="relative">
+                   <img
+                     src={hero.image}
+-                    alt="Enterprise Technology Solutions"
++                    alt="Workforce management team reviewing HR and business operations"
+                     className="w-full rounded-2xl shadow-luxury transform hover:scale-105 transition-transform duration-700"
+                   />
+                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent rounded-2xl"></div>
+@@ -408,7 +408,7 @@ function Home() {
+               <div className="absolute -inset-4 bg-gradient-brand opacity-10 rounded-3xl"></div>
+               <img
+                 src={about.image}
+-                alt="Sri Lankan technology professional working in a modern office"
++                alt="South Asian software team collaborating in a modern office"
+                 className="w-full rounded-2xl shadow-luxury relative z-10"
+               />
+ 
