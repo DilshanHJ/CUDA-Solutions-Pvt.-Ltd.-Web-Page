@@ -43,6 +43,48 @@ function Home() {
     "Power BI": ["powerbi", "F2C811"],
   };
 
+  const renderTechnologyIcon = (name, slug, color) => {
+    if (name === "AWS") {
+      return (
+        <svg viewBox="0 0 64 40" className="tech-brand-icon" role="img" aria-label="AWS logo">
+          <text x="4" y="24" fontSize="22" fontWeight="700" fill="currentColor" fontFamily="Arial, sans-serif">aws</text>
+          <path d="M11 30c11 5 26 6 40 0" fill="none" stroke="#FF9900" strokeWidth="3" strokeLinecap="round" />
+          <path d="M46 28l6 2-3 5" fill="none" stroke="#FF9900" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    }
+
+    if (name === "Azure") {
+      return (
+        <svg viewBox="0 0 48 48" className="tech-brand-icon" role="img" aria-label="Microsoft Azure logo">
+          <path d="M18 6h11L17 39H6L18 6Z" fill="#0078D4" />
+          <path d="M29 6 18 27h12l-7 12h19L29 6Z" fill="#1490DF" />
+        </svg>
+      );
+    }
+
+    if (name === "Power BI") {
+      return (
+        <svg viewBox="0 0 48 48" className="tech-brand-icon" role="img" aria-label="Power BI logo">
+          <rect x="7" y="19" width="7" height="20" rx="3.5" fill="#F2C811" />
+          <rect x="17" y="13" width="7" height="26" rx="3.5" fill="#E6B800" />
+          <rect x="27" y="8" width="7" height="31" rx="3.5" fill="#D9AA00" />
+          <rect x="37" y="4" width="7" height="35" rx="3.5" fill="#C79C00" />
+        </svg>
+      );
+    }
+
+    return (
+      <img
+        src={`https://cdn.simpleicons.org/${slug}/${color}`}
+        alt=""
+        loading="lazy"
+        className="tech-brand-icon"
+        aria-hidden="true"
+      />
+    );
+  };
+
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 300], [0, 50]);
   const y2 = useTransform(scrollY, [0, 300], [0, -50]);
@@ -342,13 +384,7 @@ function Home() {
                   transition={{ duration: 0.42, delay: index * 0.03 }}
                   className="tech-honeycomb-item group"
                 >
-                  <img
-                    src={`https://cdn.simpleicons.org/${slug}/${color}`}
-                    alt=""
-                    loading="lazy"
-                    className="tech-brand-icon"
-                    aria-hidden="true"
-                  />
+                  {renderTechnologyIcon(tech, slug, color)}
                   <span>{tech}</span>
                 </motion.div>
               );
