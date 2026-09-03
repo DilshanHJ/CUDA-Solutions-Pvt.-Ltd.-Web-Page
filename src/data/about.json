@@ -1,166 +1,93 @@
 {
   "hero": {
     "title": "About 4stax Labs",
-    "subtitle": "Innovating Since 2008",
-    "description": "A premier enterprise software development and digital marketing company committed to transforming businesses through cutting-edge technology and strategic innovation.",
+    "subtitle": "Sri Lankan Software. Built Around Real Business Operations.",
+    "description": "4stax Labs is a Sri Lankan software development company building enterprise applications and SaaS platforms that simplify workforce and business operations. We combine product thinking, practical engineering, and close client collaboration to deliver secure, scalable solutions across web, desktop, mobile, and cloud environments—designed around how teams actually work.",
     "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80"
   },
   "story": {
     "title": "Our Story",
-    "subtitle": "Building the Future of Enterprise Technology",
+    "subtitle": "A focused journey from a small software team to a trusted enterprise technology partner.",
     "content": [
-      "Founded in 2008 with a vision to bridge the gap between innovative technology and practical business solutions, 4stax Labs has grown from a small team of passionate developers to a global enterprise serving Fortune 500 companies worldwide.",
-      "Our journey began with a simple belief: that every business, regardless of size or industry, deserves access to enterprise-grade technology solutions that can transform their operations and accelerate growth.",
-      "Today, we're proud to be at the forefront of digital transformation, helping businesses navigate the complexities of modern technology while delivering measurable results and sustainable competitive advantages."
+      "4stax Labs was founded in 2020 with a clear idea: business software should adapt to the way people work, not force teams into rigid processes. We started by solving practical operational problems with thoughtful, maintainable software.",
+      "Since then, we have partnered with more than 10 companies, delivering solutions across workforce management, business operations, web platforms, cloud systems, and custom applications. Each project has strengthened our ability to turn complex requirements into simple, dependable digital experiences.",
+      "Today, our 12-member team continues to grow through hands-on delivery, close client collaboration, and a strong engineering mindset. We remain intentionally practical—building secure, scalable products that create measurable value without unnecessary complexity."
     ],
     "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     "stats": [
-      {"number": "15+", "label": "Years of Excellence"},
-      {"number": "500+", "label": "Projects Delivered"},
-      {"number": "200+", "label": "Enterprise Clients"},
-      {"number": "150+", "label": "Team Members"}
+      {"number": "5+", "label": "Years of Excellence"},
+      {"number": "20+", "label": "Projects Delivered"},
+      {"number": "10+", "label": "Enterprise Clients"},
+      {"number": "12", "label": "Team Members"}
     ]
   },
   "mission": {
-    "title": "Our Mission & Vision",
+    "title": "Purpose With Direction",
+    "eyebrow": "Mission & Vision",
     "mission": {
-      "title": "Mission",
-      "content": "To empower businesses worldwide with innovative software solutions and strategic digital marketing that drive growth, efficiency, and competitive advantage in an ever-evolving digital landscape."
+      "title": "Our Mission",
+      "content": "To simplify complex workforce and business operations through dependable software that is intuitive to use, secure by design, and built to create lasting operational value."
     },
     "vision": {
-      "title": "Vision",
-      "content": "To be the global leader in enterprise technology solutions, recognized for our commitment to excellence, innovation, and transformative impact on businesses across all industries."
+      "title": "Our Vision",
+      "content": "To become one of Sri Lanka's most trusted enterprise software and SaaS partners, known for practical innovation, engineering quality, and solutions that grow with the businesses behind them."
     },
     "values": [
       {
-        "title": "Innovation",
-        "description": "We constantly push the boundaries of what's possible, embracing emerging technologies and methodologies to deliver cutting-edge solutions.",
+        "title": "Practical Innovation",
+        "description": "We use technology with purpose—choosing the right approach for the problem rather than complexity for its own sake.",
         "icon": "innovation"
       },
       {
-        "title": "Excellence",
-        "description": "We maintain the highest standards in everything we do, from code quality to client service, ensuring exceptional outcomes every time.",
+        "title": "Engineering Excellence",
+        "description": "We care about reliability, maintainability, security, and the small implementation details that make software last.",
         "icon": "excellence"
       },
       {
-        "title": "Integrity",
-        "description": "We build trust through transparency, honesty, and ethical practices in all our client relationships and business operations.",
+        "title": "Trusted Partnership",
+        "description": "We communicate clearly, work transparently, and treat client goals and constraints as part of the product problem.",
         "icon": "integrity"
       },
       {
-        "title": "Collaboration",
-        "description": "We believe in the power of partnerships, working closely with our clients to understand their unique challenges and co-create solutions.",
+        "title": "Built Together",
+        "description": "We collaborate closely across disciplines and with clients so decisions are informed, useful, and grounded in reality.",
         "icon": "collaboration"
       }
     ]
   },
-  "team": {
-    "title": "Meet Our Leadership Team",
-    "description": "Industry veterans and visionary leaders driving innovation at 4stax Labs",
-    "members": [
-      {
-        "name": "Dr. Michael Chen",
-        "position": "Chief Executive Officer",
-        "bio": "With over 20 years in enterprise software development, Michael leads 4stax Labs' strategic vision and global expansion initiatives.",
-        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-        "linkedin": "#",
-        "expertise": ["Strategic Leadership", "Enterprise Architecture", "Digital Transformation"]
-      },
-      {
-        "name": "Sarah Rodriguez",
-        "position": "Chief Technology Officer",
-        "bio": "Sarah oversees our technology strategy and innovation initiatives, ensuring we stay at the forefront of emerging technologies.",
-        "image": "https://images.unsplash.com/photo-1494790108755-2616b9e27401?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-        "linkedin": "#",
-        "expertise": ["Cloud Architecture", "AI/ML", "DevOps"]
-      },
-      {
-        "name": "David Kim",
-        "position": "Chief Marketing Officer",
-        "bio": "David leads our digital marketing division, developing data-driven strategies that deliver exceptional ROI for our clients.",
-        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-        "linkedin": "#",
-        "expertise": ["Digital Strategy", "Growth Marketing", "Analytics"]
-      },
-      {
-        "name": "Lisa Thompson",
-        "position": "Chief Operations Officer",
-        "bio": "Lisa ensures operational excellence across all our divisions, maintaining our high standards of quality and client satisfaction.",
-        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-        "linkedin": "#",
-        "expertise": ["Operations Management", "Quality Assurance", "Process Optimization"]
-      }
-    ]
-  },
   "culture": {
-    "title": "Our Culture & Work Environment",
-    "description": "Building a workplace where innovation thrives and talent flourishes",
+    "title": "A Culture Built for Good Work",
+    "description": "We keep our environment focused, collaborative, and low on unnecessary process—giving people room to think deeply, take ownership, share ideas, and continuously improve how we build.",
     "highlights": [
       {
-        "title": "Remote-First Culture",
-        "description": "Flexible work arrangements that enable our team to deliver their best work from anywhere in the world.",
-        "icon": "remote"
+        "title": "Ownership Over Hierarchy",
+        "description": "Ideas can come from anywhere. Team members are encouraged to take responsibility, challenge assumptions, and improve the outcome.",
+        "icon": "ownership"
       },
       {
-        "title": "Continuous Learning",
-        "description": "Investment in professional development, certifications, and cutting-edge technology training for all team members.",
+        "title": "Deep Work Friendly",
+        "description": "We value focused engineering time, clear communication, and sensible processes that protect attention instead of creating noise.",
+        "icon": "focus"
+      },
+      {
+        "title": "Learn, Share, Improve",
+        "description": "New tools, better patterns, and lessons from delivery are shared across the team so each project makes the next one stronger.",
         "icon": "learning"
       },
       {
-        "title": "Innovation Time",
-        "description": "Dedicated time for exploring new technologies and working on passion projects that could benefit our clients.",
-        "icon": "innovation"
-      },
-      {
-        "title": "Work-Life Balance",
-        "description": "Comprehensive benefits and wellness programs that support our team's personal and professional growth.",
-        "icon": "balance"
+        "title": "People Before Process",
+        "description": "We aim for a sustainable working rhythm where accountability, flexibility, respect, and quality can coexist.",
+        "icon": "people"
       }
     ],
     "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80"
   },
-  "certifications": {
-    "title": "Certifications & Partnerships",
-    "description": "Recognized expertise and strategic partnerships that ensure the highest quality standards",
-    "items": [
-      {
-        "name": "ISO 27001 Certified",
-        "description": "Information Security Management",
-        "image": "https://via.placeholder.com/120x80/457b9d/white?text=ISO+27001"
-      },
-      {
-        "name": "AWS Advanced Partner",
-        "description": "Amazon Web Services",
-        "image": "https://via.placeholder.com/120x80/ff9900/white?text=AWS"
-      },
-      {
-        "name": "Microsoft Gold Partner",
-        "description": "Azure Cloud Solutions",
-        "image": "https://via.placeholder.com/120x80/00a4ef/white?text=Microsoft"
-      },
-      {
-        "name": "Google Cloud Partner",
-        "description": "Cloud Platform Solutions",
-        "image": "https://via.placeholder.com/120x80/4285f4/white?text=GCP"
-      },
-      {
-        "name": "Salesforce Partner",
-        "description": "CRM Integration Specialist",
-        "image": "https://via.placeholder.com/120x80/00a1e0/white?text=Salesforce"
-      },
-      {
-        "name": "HubSpot Partner",
-        "description": "Marketing Automation",
-        "image": "https://via.placeholder.com/120x80/ff7a59/white?text=HubSpot"
-      }
-    ]
-  },
   "cta": {
-    "title": "Ready to Join Our Journey?",
-    "description": "Whether you're looking for career opportunities or enterprise solutions, we'd love to connect with you.",
-    "primaryCta": "View Careers",
-    "secondaryCta": "Contact Us",
-    "primaryLink": "/careers",
-    "secondaryLink": "/contact"
+    "title": "Build Something Practical With Us",
+    "description": "If you are planning a workforce platform, enterprise application, SaaS product, or custom system, we would be glad to understand the problem and explore the right way to build it.",
+    "primaryCta": "Start a Conversation",
+    "secondaryCta": "Explore Our Services",
+    "primaryLink": "/contact",
+    "secondaryLink": "/services"
   }
 }

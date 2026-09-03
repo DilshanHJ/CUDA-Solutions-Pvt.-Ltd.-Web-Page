@@ -7,15 +7,15 @@ function Footer() {
   const footerLinks = {
     company: [
       { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/about#team" },
+      { name: "Our Story", href: "/about#story" },
       { name: "Careers", href: "/careers" },
       { name: "Press", href: "/press" },
     ],
     services: [
-      { name: "Software Development", href: "/services" },
-      { name: "Digital Marketing", href: "/services" },
-      { name: "Cloud Solutions", href: "/services" },
-      { name: "Consulting", href: "/services" },
+      { name: "Enterprise Applications", href: "/services#software-development" },
+      { name: "Workforce Systems", href: "/services#software-development" },
+      { name: "Cloud & SaaS", href: "/services#software-development" },
+      { name: "Desktop & Mobile Apps", href: "/services#software-development" },
     ],
     support: [
       { name: "Contact Us", href: "/contact" },
@@ -48,9 +48,9 @@ function Footer() {
                 <img src={logo} alt="4stax Labs Logo" className="h-24 mr-3" />
               </div>
               <p className="text-neutral-400 leading-relaxed mb-6 max-w-md">
-                Enterprise software development and digital marketing excellence
-                that transforms businesses worldwide through innovative
-                technology solutions.
+                Enterprise software and SaaS solutions built around real
+                workforce and business operations, with practical engineering
+                across web, desktop, mobile, and cloud.
               </p>
 
               {/* Social Links */}
