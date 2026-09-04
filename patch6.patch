@@ -1,0 +1,7 @@
+diff --git a/public/_redirects b/public/_redirects
+new file mode 100644
+index 0000000..7797f7c
+--- /dev/null
++++ b/public/_redirects
+@@ -0,0 +1 @@
++/* /index.html 200
