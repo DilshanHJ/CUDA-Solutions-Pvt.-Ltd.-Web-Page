@@ -15,7 +15,10 @@ function Navbar() {
     { name: "Contact", path: "/contact" },
   ];
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => {
+    if (path === "/") return location.pathname === "/";
+    return location.pathname === path || location.pathname.startsWith(`${path}/`);
+  };
 
   return (
     <nav className="bg-gradient-hero backdrop-blur-xl border-b border-white/10 sticky top-0 z-50 shadow-luxury">
