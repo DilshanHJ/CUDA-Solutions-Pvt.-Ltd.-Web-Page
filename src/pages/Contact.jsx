@@ -1,413 +1,220 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  CheckCircle2,
+  Clock,
+  Copy,
+  Globe,
+  Layers,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Phone,
+  Send,
+  ShieldCheck,
+  Sparkles,
+  Zap,
+} from "lucide-react";
 import contactData from "../data/contact.json";
 
+const iconMap = {
+  email: Mail,
+  phone: Phone,
+  location: MapPin,
+  clock: Clock,
+  response: Zap,
+  consultation: Layers,
+  security: ShieldCheck,
+  global: Globe,
+};
+
 function Contact() {
-  const { title, description } = contactData.hero;
-  
-  // Initialize form data based on contact.json fields
-  const initializeFormData = () => {
-    const initialData = {};
-    contactData.form.fields.forEach(field => {
-      initialData[field.name] = "";
-    });
-    return initialData;
-  };
+  const initializeFormData = () =>
+    contactData.form.fields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {});
 
-  const [formData, setFormData] = useState(initializeFormData());
+  const [formData, setFormData] = useState(initializeFormData);
   const [submitted, setSubmitted] = useState(false);
+  const [copied, setCopied] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const directMethods = useMemo(
+    () => contactData.contactInfo.methods.filter((method) => ["email", "phone", "location"].includes(method.icon)),
+    []
+  );
+
+  const businessHours = contactData.contactInfo.methods.find((method) => method.icon === "clock");
+
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = "Contact 4stax Labs | Software, SaaS & Product Development";
+
+    let description = document.querySelector('meta[name="description"]');
+    const previousDescription = description?.getAttribute("content");
+    if (!description) {
+      description = document.createElement("meta");
+      description.setAttribute("name", "description");
+      document.head.appendChild(description);
+    }
+    description.setAttribute(
+      "content",
+      "Contact 4stax Labs in Colombo, Sri Lanka to discuss enterprise software, SaaS platforms, workforce systems, hospitality software and custom applications."
+    );
+
+    return () => {
+      document.title = previousTitle;
+      if (previousDescription) description.setAttribute("content", previousDescription);
+    };
+  }, []);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((current) => ({ ...current, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically send the form data to a backend or API
+  const handleSubmit = (event) => {
+    event.preventDefault();
     setSubmitted(true);
-    // Reset form after submission
     setFormData(initializeFormData());
   };
 
-  // Use contact info from contact.json
-  const contactInfo = contactData.contactInfo.methods.filter(method => 
-    ['email', 'phone', 'location'].includes(method.icon)
-  ).map(method => ({
-    icon: method.icon,
-    title: method.title,
-    detail: method.value,
-    link: method.link,
-  }));
-
-  // Function to render form fields dynamically
-  const renderFormField = (field, index) => {
-    const commonClasses = "w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 focus:outline-none transition-all duration-300 shadow-sm hover:shadow-md";
-    const labelClasses = "block text-gray-900 mb-2 font-medium";
-
-    const fieldElement = () => {
-      switch (field.type) {
-        case 'text':
-        case 'email':
-        case 'tel':
-          return (
-            <input
-              type={field.type}
-              id={field.name}
-              name={field.name}
-              value={formData[field.name] || ""}
-              onChange={handleChange}
-              required={field.required}
-              className={commonClasses}
-              placeholder={field.placeholder}
-            />
-          );
-        case 'select':
-          return (
-            <select
-              id={field.name}
-              name={field.name}
-              value={formData[field.name] || ""}
-              onChange={handleChange}
-              required={field.required}
-              className={`${commonClasses} appearance-none`}
-            >
-              <option value="">Select {field.label}</option>
-              {field.options.map((option, idx) => (
-                <option key={idx} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          );
-        case 'textarea':
-          return (
-            <textarea
-              id={field.name}
-              name={field.name}
-              value={formData[field.name] || ""}
-              onChange={handleChange}
-              rows="4"
-              required={field.required}
-              className={`${commonClasses} resize-none`}
-              placeholder={field.placeholder}
-            />
-          );
-        default:
-          return null;
-      }
-    };
-
-    return (
-      <motion.div
-        key={field.name}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        className={field.type === 'textarea' || field.name === 'message' || field.name === 'service' || field.name === 'budget' || field.name === 'timeline' ? 'col-span-full' : ''}
-      >
-        <label htmlFor={field.name} className={labelClasses}>
-          {field.label}
-        </label>
-        {fieldElement()}
-      </motion.div>
-    );
-  };
-
-  const getIcon = (iconName) => {
-    const iconProps = "w-6 h-6 text-accent-400";
-
-    switch (iconName) {
-      case "phone":
-        return (
-          <svg
-            className={iconProps}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-            />
-          </svg>
-        );
-      case "email":
-        return (
-          <svg
-            className={iconProps}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 8a3 3 0 013-3h12a3 3 0 013 3v8a3 3 0 01-3 3H6a3 3 0 01-3-3V8z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8"
-            />
-          </svg>
-        );
-      case "location":
-        return (
-          <svg
-            className={iconProps}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
-        );
-      default:
-        return null;
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("4staxlabs@gmail.com");
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      window.location.href = "mailto:4staxlabs@gmail.com";
     }
   };
 
+  const renderFormField = (field) => {
+    const sharedProps = {
+      id: field.name,
+      name: field.name,
+      value: formData[field.name] || "",
+      onChange: handleChange,
+      required: field.required,
+      className: "contact-field-control",
+    };
+
+    let control = null;
+    if (["text", "email", "tel"].includes(field.type)) {
+      control = <input {...sharedProps} type={field.type} placeholder={field.placeholder} />;
+    } else if (field.type === "select") {
+      control = (
+        <select {...sharedProps}>
+          <option value="">Select an option</option>
+          {field.options.map((option) => (
+            <option key={option} value={option}>{option}</option>
+          ))}
+        </select>
+      );
+    } else if (field.type === "textarea") {
+      control = <textarea {...sharedProps} rows={5} placeholder={field.placeholder} />;
+    }
+
+    const isWide = ["service", "message"].includes(field.name);
+
+    return (
+      <div key={field.name} className={`contact-field ${isWide ? "contact-field--wide" : ""}`}>
+        <div className="contact-field-label-row">
+          <label htmlFor={field.name}>{field.label}</label>
+          {!field.required && <span>Optional</span>}
+        </div>
+        {control}
+      </div>
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-subtle">
-      {/* Header Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
-        <div className="absolute inset-0 bg-hero-pattern opacity-40"></div>
-        <div className="absolute inset-0 bg-mesh-sophisticated opacity-30"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-950/50 to-transparent"></div>
+    <div className="contact-page">
+      <section className="contact-hero">
+        <div className="contact-hero-grid" aria-hidden="true" />
+        <div className="contact-hero-glow contact-hero-glow-a" aria-hidden="true" />
+        <div className="contact-hero-glow contact-hero-glow-b" aria-hidden="true" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-5xl mx-auto text-white"
-          >
+          <div className="contact-hero-layout">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20"
+              transition={{ duration: 0.7 }}
+              className="contact-hero-copy"
             >
-              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
-              Contact Us
-            </motion.div>
+              <div className="contact-eyebrow">
+                <span className="contact-live-dot" />
+                {contactData.hero.subtitle}
+              </div>
+              <h1>{contactData.hero.title}</h1>
+              <p>{contactData.hero.description}</p>
 
-            <h1 className="text-5xl lg:text-7xl font-bold font-display mb-8 leading-tight">
-              <span className="gradient-text">{title}</span>
-            </h1>
+              <div className="contact-hero-actions">
+                <a href="#project-brief" className="contact-primary-action">
+                  Share your project
+                  <ArrowRight size={17} />
+                </a>
+                <button type="button" onClick={copyEmail} className="contact-copy-action">
+                  {copied ? <Check size={17} /> : <Copy size={17} />}
+                  {copied ? "Email copied" : "Copy email"}
+                </button>
+              </div>
 
-            <p className="text-xl text-neutral-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-              {description}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="btn btn-primary text-lg px-8 py-4 shadow-dramatic"
-              >
-                View Our Services
-                <svg
-                  className="w-5 h-5 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-              <Link to="/about" className="btn btn-secondary text-lg px-8 py-4">
-                Learn About Us
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <div className="badge badge-brand mb-6">
-              <div className="w-2 h-2 bg-brand-500 rounded-full mr-2 animate-pulse"></div>
-              Get In Touch
-            </div>
-            <h2 className="text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-6">
-              Let's Start the Conversation
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Have questions about our services or interested in starting a
-              project? We're here to help you transform your business.
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-16">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="bg-white p-8 rounded-2xl shadow-card hover:shadow-luxury transition-all duration-500 border border-gray-100 h-full relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-brand opacity-5 rounded-full transform translate-x-16 -translate-y-16"></div>
-
-                <h3 className="text-2xl font-bold font-display text-gray-900 mb-4">
-                  {contactData.form.title}
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {contactData.form.description}
-                </p>
-
-                {submitted ? (
-                  <div className="bg-accent-50 border border-accent-200 rounded-lg p-5 text-center">
-                    <svg
-                      className="w-12 h-12 text-accent-600 mx-auto mb-3"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Thank You!
-                    </h3>
-                    <p className="text-gray-700">
-                      {contactData.form.successMessage}
-                    </p>
-                    <button
-                      onClick={() => setSubmitted(false)}
-                      className="mt-4 btn btn-accent px-4 py-2 rounded-lg transition-all duration-300"
-                    >
-                      Send Another Message
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {contactData.form.fields.map((field, index) => 
-                        renderFormField(field, index)
-                      )}
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="btn btn-primary text-lg px-6 py-3 shadow-glow hover:shadow-primary-500/25 rounded-lg transition-all duration-300 w-full md:w-auto"
-                    >
-                      {contactData.form.submitText}
-                      <svg
-                        className="w-5 h-5 ml-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
-                    </button>
-                  </form>
-                )}
+              <div className="contact-hero-proof">
+                <span><CheckCircle2 size={15} /> Sri Lanka based</span>
+                <span><CheckCircle2 size={15} /> NDA friendly</span>
+                <span><CheckCircle2 size={15} /> Product-minded delivery</span>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.96, y: 18 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.08 }}
+              className="contact-signal-panel"
             >
-              <div className="bg-gradient-navy text-white p-8 rounded-2xl shadow-luxury relative overflow-hidden">
-                <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold font-display text-white mb-4">
-                    {contactData.contactInfo.title}
-                  </h3>
-                  <p className="text-gray-300 mb-8 leading-relaxed">
-                    {contactData.contactInfo.description}
-                  </p>
+              <div className="contact-signal-head">
+                <div>
+                  <span>Conversation desk</span>
+                  <strong>Colombo · UTC+5:30</strong>
+                </div>
+                <div className="contact-signal-status"><span /> Available for inquiries</div>
+              </div>
 
-                  <div className="space-y-6 mb-8">
-                    {contactInfo.map((info, index) => (
-                      <motion.div
-                        key={info.title}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="group flex items-start glass p-5 rounded-xl border border-white/20 shadow-glass hover:shadow-luxury transition-all duration-500"
-                      >
-                        <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-accent-glow">
-                          {getIcon(info.icon)}
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-100 transition-colors duration-300">
-                            {info.title}
-                          </h3>
-                          <a
-                            href={info.link}
-                            target={
-                              info.icon === "location" ? "_blank" : "_self"
-                            }
-                            rel={
-                              info.icon === "location"
-                                ? "noopener noreferrer"
-                                : ""
-                            }
-                            className="text-gray-300 hover:text-accent-400 transition-colors duration-300 group-hover:translate-x-1 transform inline-block"
-                          >
-                            {info.detail}
-                          </a>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  <div className="glass p-5 rounded-lg border border-white/20">
-                    <h3 className="text-lg font-bold text-white mb-3">
-                      {contactData.contactInfo.methods.find(method => method.icon === 'clock')?.title || 'Business Hours'}
-                    </h3>
-                    <div className="space-y-2 text-gray-300">
-                      <div className="flex justify-between">
-                        <span>{contactData.contactInfo.methods.find(method => method.icon === 'clock')?.value || 'Mon-Fri 9AM-6PM PST'}</span>
+              <div className="contact-signal-stack">
+                {directMethods.map((method, index) => {
+                  const Icon = iconMap[method.icon];
+                  const external = method.icon === "location";
+                  return (
+                    <motion.a
+                      key={method.title}
+                      href={method.link}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noreferrer" : undefined}
+                      className="contact-signal-card"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 320, damping: 24 }}
+                    >
+                      <div className="contact-signal-icon"><Icon size={19} /></div>
+                      <div>
+                        <span>{method.title}</span>
+                        <strong>{method.value}</strong>
+                        <small>{method.description}</small>
                       </div>
-                    </div>
-                  </div>
+                      <ArrowUpRight size={16} className="contact-signal-arrow" />
+                      <span className="contact-signal-index">0{index + 1}</span>
+                    </motion.a>
+                  );
+                })}
+              </div>
+
+              <div className="contact-signal-foot">
+                <Clock size={16} />
+                <div>
+                  <span>Usual collaboration window</span>
+                  <strong>{businessHours?.value}</strong>
                 </div>
               </div>
             </motion.div>
@@ -415,56 +222,132 @@ function Contact() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-32 bg-gradient-hero text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
-        <div className="absolute inset-0 bg-mesh-sophisticated opacity-20"></div>
+      <section className="contact-intro-strip">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="contact-intro-grid">
+            {contactData.features.map((feature, index) => {
+              const Icon = iconMap[feature.icon] || Sparkles;
+              return (
+                <motion.article
+                  key={feature.title}
+                  className="contact-principle"
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ delay: index * 0.06 }}
+                  whileHover={{ y: -6 }}
+                >
+                  <div className="contact-principle-top">
+                    <Icon size={20} />
+                    <span>0{index + 1}</span>
+                  </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </motion.article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
+      <section id="project-brief" className="contact-form-section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="contact-form-layout">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="contact-form-aside"
+            >
+              <div className="contact-section-label">Project brief</div>
+              <h2>A useful first conversation starts with context.</h2>
+              <p>
+                You do not need a finished specification. Tell us where the friction is,
+                who uses the process and what a better outcome should look like.
+              </p>
+
+              <div className="contact-process-list">
+                {[
+                  ["01", "Understand", "We map the problem, users and operational constraints."],
+                  ["02", "Shape", "We identify the smallest sensible scope and product direction."],
+                  ["03", "Build", "We turn the agreed workflow into reliable software in clear stages."],
+                ].map(([number, title, description]) => (
+                  <div key={title} className="contact-process-item">
+                    <span>{number}</span>
+                    <div><strong>{title}</strong><p>{description}</p></div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="contact-aside-note">
+                <MessageSquare size={19} />
+                <p>Prefer email? Send your brief directly to <a href="mailto:4staxlabs@gmail.com">4staxlabs@gmail.com</a>.</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              className="contact-form-card"
+            >
+              <div className="contact-form-card-head">
+                <div>
+                  <span>Start here</span>
+                  <h3>{contactData.form.title}</h3>
+                  <p>{contactData.form.description}</p>
+                </div>
+                <div className="contact-form-card-mark"><Sparkles size={20} /></div>
+              </div>
+
+              {submitted ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="contact-success"
+                >
+                  <div className="contact-success-icon"><CheckCircle2 size={28} /></div>
+                  <h3>Brief captured.</h3>
+                  <p>{contactData.form.successMessage}</p>
+                  <button type="button" onClick={() => setSubmitted(false)}>Send another brief</button>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="contact-form-grid">
+                  {contactData.form.fields.map(renderFormField)}
+                  <div className="contact-form-submit-row">
+                    <p>By sending this form, you&apos;re simply starting a project conversation — no commitment required.</p>
+                    <button type="submit" className="contact-submit-button">
+                      {contactData.form.submitText}
+                      <Send size={17} />
+                    </button>
+                  </div>
+                </form>
+              )}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-final-cta">
+        <div className="contact-final-grid" aria-hidden="true" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-5xl mx-auto"
+            viewport={{ once: true, amount: 0.35 }}
+            className="contact-final-panel"
           >
-            <div className="inline-flex items-center px-4 py-2 glass rounded-full text-accent-200 text-sm font-medium mb-8 border border-white/20">
-              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></div>
-              Ready to Start?
+            <div>
+              <span className="contact-section-label contact-section-label--light">One problem is enough</span>
+              <h2>{contactData.cta.title}</h2>
+              <p>{contactData.cta.description}</p>
             </div>
-
-            <h2 className="text-5xl lg:text-6xl font-bold font-display mb-8">
-              {contactData.cta?.title || "Ready to Start Your Project?"}
-            </h2>
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              {contactData.cta?.description || "Our team is eager to discuss how we can help transform your business with custom software solutions and SaaS platforms."}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="btn btn-primary text-lg px-8 py-4 shadow-dramatic"
-              >
-                Explore Our Services
-                <svg
-                  className="w-5 h-5 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-              <Link
-                to="/portfolio"
-                className="btn btn-secondary text-lg px-8 py-4"
-              >
-                View Portfolio
+            <div className="contact-final-actions">
+              <a href={contactData.cta.link} className="contact-final-primary">
+                {contactData.cta.buttonText} <ArrowUpRight size={18} />
+              </a>
+              <Link to="/services" className="contact-final-secondary">
+                Explore services <ArrowRight size={17} />
               </Link>
             </div>
           </motion.div>

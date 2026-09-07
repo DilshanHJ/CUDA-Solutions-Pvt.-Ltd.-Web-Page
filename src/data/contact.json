@@ -1,82 +1,81 @@
 {
   "hero": {
-    "title": "Let's Build Something Amazing Together",
-    "subtitle": "Get In Touch",
-    "description": "Ready to transform your business with enterprise-grade software solutions and strategic digital marketing? Our team is here to discuss your project requirements and provide expert guidance.",
-    "backgroundImage": "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80"
+    "title": "Turn Your Next Operational Challenge Into Better Software",
+    "subtitle": "Start a Conversation",
+    "description": "Tell us what is slowing your team down, what you want to automate, or what you want to build next. We turn real business workflows into focused software, SaaS and product experiences that are practical to run and ready to scale."
   },
   "contactInfo": {
-    "title": "Contact Information",
-    "description": "Multiple ways to reach our expert team",
+    "title": "A direct line to our team",
+    "description": "No complicated handoffs. Start with the channel that works best for you and we will take it from there.",
     "methods": [
       {
         "title": "Email Us",
-        "description": "Get in touch via email for detailed discussions",
-        "value": "info@4staxlabs.com",
-        "link": "mailto:info@4staxlabs.com",
+        "description": "Best for project briefs, requirements and detailed questions",
+        "value": "4staxlabs@gmail.com",
+        "link": "mailto:4staxlabs@gmail.com",
         "icon": "email"
       },
       {
         "title": "Call Us",
-        "description": "Speak directly with our consultants",
-        "value": "+1 (555) 123-4567",
-        "link": "tel:+15551234567",
+        "description": "Call during our usual collaboration hours",
+        "value": "+94 11 000 4827",
+        "link": "tel:+94110004827",
         "icon": "phone"
       },
       {
         "title": "Our Location",
-        "description": "Visit our headquarters",
-        "value": "San Francisco, CA",
-        "link": "#",
+        "description": "Sri Lanka based, built for local and global delivery",
+        "value": "Colombo, Sri Lanka",
+        "link": "https://www.google.com/maps/search/?api=1&query=Colombo%2C%20Sri%20Lanka",
         "icon": "location"
       },
       {
         "title": "Business Hours",
-        "description": "When we're available",
-        "value": "Mon-Fri 9AM-6PM PST",
+        "description": "Our usual collaboration window",
+        "value": "Mon-Fri · 9:00 AM-6:00 PM · UTC+5:30",
         "link": "#",
         "icon": "clock"
       }
     ]
   },
   "form": {
-    "title": "Send Us a Message",
-    "description": "Fill out the form below and we'll get back to you within 24 hours",
+    "title": "Tell us what you are building",
+    "description": "A little context helps us make the first conversation useful. Share what you know so far — rough ideas are welcome too.",
     "fields": [
       {
         "name": "firstName",
         "label": "First Name",
         "type": "text",
         "required": true,
-        "placeholder": "John"
+        "placeholder": "Your first name"
       },
       {
         "name": "lastName",
         "label": "Last Name",
         "type": "text",
         "required": true,
-        "placeholder": "Doe"
+        "placeholder": "Your last name"
       },
       {
         "name": "email",
         "label": "Email Address",
         "type": "email",
         "required": true,
-        "placeholder": "john.doe@company.com"
+        "placeholder": "you@company.com"
       },
       {
         "name": "company",
         "label": "Company",
         "type": "text",
         "required": false,
-        "placeholder": "Your Company Name"
+        "placeholder": "Company or organization"
       },
       {
         "name": "phone",
         "label": "Phone Number",
         "type": "tel",
         "required": false,
-        "placeholder": "+1 (555) 123-4567"
+        "placeholder": "+94 7X XXX XXXX"
       },
       {
         "name": "service",
@@ -86,10 +85,11 @@
         "options": [
           "Enterprise Software Development",
           "SaaS Platform Development",
-          "Digital Marketing Services",
-          "Cloud Migration & Architecture",
-          "Mobile App Development",
-          "Consultation & Strategy",
+          "Workforce & HR Systems",
+          "Hospitality Software",
+          "Cloud Architecture & Modernization",
+          "Web, Desktop & Mobile Applications",
+          "Consultation & Product Strategy",
           "Other"
         ]
       },
@@ -99,12 +99,12 @@
         "type": "select",
         "required": false,
         "options": [
-          "Under $50k",
+          "Exploring options",
+          "Under $10k",
+          "$10k - $25k",
+          "$25k - $50k",
           "$50k - $100k",
-          "$100k - $250k",
-          "$250k - $500k",
-          "$500k - $1M",
-          "$1M+",
+          "$100k+",
           "Prefer not to say"
         ]
       },
@@ -127,37 +127,37 @@
         "label": "Project Details",
         "type": "textarea",
         "required": true,
-        "placeholder": "Tell us about your project requirements, challenges, and goals..."
+        "placeholder": "What are you trying to improve, replace or build? Tell us about the workflow, users and outcome you have in mind."
       }
     ],
-    "submitText": "Send Message",
-    "successMessage": "Thank you for your message! We'll get back to you within 24 hours."
+    "submitText": "Send Project Brief",
+    "successMessage": "Thanks — your project brief has been captured. We look forward to continuing the conversation."
   },
   "cta": {
-    "title": "Prefer to Schedule a Call?",
-    "description": "Book a 30-minute consultation to discuss your project in detail",
-    "buttonText": "Schedule Consultation",
-    "link": "#"
+    "title": "Not ready for a full brief? Start with one problem.",
+    "description": "Send us the bottleneck, manual process or product idea you want to improve. A focused first conversation is often enough to find the right direction.",
+    "buttonText": "Email 4stax Labs",
+    "link": "mailto:4staxlabs@gmail.com"
   },
   "features": [
     {
-      "title": "24-Hour Response",
-      "description": "We respond to all inquiries within 24 hours",
+      "title": "Thoughtful first response",
+      "description": "We start by understanding the workflow and outcome, not by forcing a predefined package.",
       "icon": "response"
     },
     {
-      "title": "Free Consultation",
-      "description": "Initial consultation and project assessment at no cost",
+      "title": "Product-minded guidance",
+      "description": "We can help shape scope, priorities and the simplest path from idea to a usable release.",
       "icon": "consultation"
     },
     {
-      "title": "NDA Available",
-      "description": "Confidentiality agreements for sensitive projects",
+      "title": "Confidential by default",
+      "description": "Sensitive project discussions can be handled under an NDA when required.",
       "icon": "security"
     },
     {
-      "title": "Global Support",
-      "description": "Supporting clients across multiple time zones",
+      "title": "Sri Lanka based delivery",
+      "description": "A local engineering team with the flexibility to collaborate with clients across time zones.",
       "icon": "global"
     }
   ]
