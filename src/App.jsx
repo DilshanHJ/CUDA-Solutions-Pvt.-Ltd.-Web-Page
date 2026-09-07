@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -9,9 +9,23 @@ import HospitalityProduct from "./pages/HospitalityProduct";
 import WorkforceProduct from "./pages/WorkforceProduct";
 import Layout from "./layouts/Layout";
 
+function ScrollToTop() {
+  const { pathname, search, key } = useLocation();
+
+  React.useLayoutEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname, search, key]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
