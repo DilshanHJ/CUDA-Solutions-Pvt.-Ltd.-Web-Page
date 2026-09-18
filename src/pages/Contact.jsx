@@ -136,7 +136,7 @@ function Contact() {
         <div className="contact-hero-glow contact-hero-glow-a" aria-hidden="true" />
         <div className="contact-hero-glow contact-hero-glow-b" aria-hidden="true" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <div className="contact-hero-layout">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -223,7 +223,7 @@ function Contact() {
       </section>
 
       <section className="contact-intro-strip">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="contact-intro-grid">
             {contactData.features.map((feature, index) => {
               const Icon = iconMap[feature.icon] || Sparkles;
@@ -251,7 +251,7 @@ function Contact() {
       </section>
 
       <section id="project-brief" className="contact-form-section">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="contact-form-layout">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -330,7 +330,7 @@ function Contact() {
 
       <section className="contact-final-cta">
         <div className="contact-final-grid" aria-hidden="true" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}

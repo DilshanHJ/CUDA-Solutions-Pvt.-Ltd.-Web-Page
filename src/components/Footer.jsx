@@ -33,7 +33,7 @@ function Footer() {
       <div className="site-footer-orb site-footer-orb-a" aria-hidden="true" />
       <div className="site-footer-orb site-footer-orb-b" aria-hidden="true" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="site-shell relative z-10">
         <div className="site-footer-cta">
           <div>
             <div className="site-footer-kicker">

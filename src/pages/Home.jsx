@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, ArrowRight, Check, Quote, Workflow } from "lucide-react";
+import { ArrowDown, ArrowRight, Check, Quote } from "lucide-react";
 import homeData from "../data/home.json";
 
 const sectionLinks = [
@@ -377,9 +377,8 @@ function Home() {
             transition={{ duration: 0.6 }}
             className="home-v2-stories-intro"
           >
-            <div className="home-v2-stories-sticky">
+            <div className="home-v2-stories-heading">
               <div className="home-v2-eyebrow"><span>04</span> Client Experiences</div>
-              <div className="home-v2-story-icon"><Workflow size={27} strokeWidth={1.6} /></div>
               <h2>Built Around the Way You Work</h2>
               <p>A few examples of the outcomes our software-focused approach is designed to create.</p>
             </div>

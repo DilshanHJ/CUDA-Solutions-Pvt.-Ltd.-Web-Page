@@ -106,7 +106,7 @@ function WorkforceProduct() {
         <div className="product-detail-grid" />
         <div className="product-detail-glow product-detail-glow-one" />
         <div className="product-detail-glow product-detail-glow-two" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-14 items-center min-h-[780px] py-20 lg:py-24">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -228,7 +228,7 @@ function WorkforceProduct() {
       </section>
 
       <section className="product-signal-strip">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4">
             {[
               [Database, "One employee record", "From master data to payroll"],
@@ -246,7 +246,7 @@ function WorkforceProduct() {
       </section>
 
       <section id="workforce-modules" className="py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="product-section-heading">
             <p>A complete workforce core</p>
             <h2>From employee master data<br />to the final payroll input.</h2>
@@ -279,7 +279,7 @@ function WorkforceProduct() {
       </section>
 
       <section className="product-dark-section workforce-flow-section py-24 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <p className="product-kicker">One continuous data flow</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-5">Clock in once. Use the data everywhere.</h2>
@@ -306,7 +306,7 @@ function WorkforceProduct() {
       </section>
 
       <section className="py-24 lg:py-32 bg-neutral-50 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="ess-showcase">
               <div className="ess-phone ess-phone-back">
@@ -348,7 +348,7 @@ function WorkforceProduct() {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="local-product-panel workforce-local-panel">
             <div className="local-product-badge"><MapPin className="w-5 h-5" /> Designed for Sri Lankan workforce operations</div>
             <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-12 items-end mt-8">
@@ -370,7 +370,7 @@ function WorkforceProduct() {
       </section>
 
       <section className="product-final-cta workforce-final-cta">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="site-shell relative z-10 text-center">
           <div className="product-brand-mark mx-auto mb-6"><UsersRound className="w-6 h-6" /></div>
           <p className="product-kicker">Pulse Workforce</p>
           <h2>Smarter attendance.<br />Simpler HR. Cleaner payroll.</h2>

@@ -128,7 +128,7 @@ function HospitalityProduct() {
         <div className="product-detail-grid" />
         <div className="product-detail-glow product-detail-glow-one" />
         <div className="product-detail-glow product-detail-glow-two" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <div className="grid lg:grid-cols-[0.92fr_1.08fr] gap-14 items-center min-h-[780px] py-20 lg:py-24">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -263,7 +263,7 @@ function HospitalityProduct() {
       </section>
 
       <section className="product-signal-strip">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4">
             {[
               [Layers3, "One platform", "Connected daily operations"],
@@ -281,7 +281,7 @@ function HospitalityProduct() {
       </section>
 
       <section id="modules" className="py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="product-section-heading">
             <p>One operating layer</p>
             <h2>Everything the property needs.<br />Without the system sprawl.</h2>
@@ -314,7 +314,7 @@ function HospitalityProduct() {
       </section>
 
       <section className="product-dark-section py-24 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="site-shell relative z-10">
           <div className="grid lg:grid-cols-[0.82fr_1.18fr] gap-14 lg:gap-20 items-start">
             <div className="lg:sticky lg:top-28">
               <p className="product-kicker">Designed around the guest journey</p>
@@ -340,7 +340,7 @@ function HospitalityProduct() {
       </section>
 
       <section className="py-24 lg:py-32 bg-neutral-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <p className="product-kicker product-kicker-light">Flexible by design</p>
@@ -378,7 +378,7 @@ function HospitalityProduct() {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="local-product-panel">
             <div className="local-product-badge"><MapPin className="w-5 h-5" /> Built with Sri Lankan hospitality in mind</div>
             <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-end mt-8">
@@ -400,7 +400,7 @@ function HospitalityProduct() {
       </section>
 
       <section className="product-final-cta">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="site-shell relative z-10 text-center">
           <div className="product-brand-mark mx-auto mb-6"><Building2 className="w-6 h-6" /></div>
           <p className="product-kicker">Atlas Hospitality</p>
           <h2>One platform. Every operation.<br />A better stay starts behind the scenes.</h2>
